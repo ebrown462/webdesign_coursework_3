@@ -1,0 +1,1691 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap%27');
+/* HTML Elements excluding Divs =======================================================================================================================*/ 
+button { cursor: pointer; }
+html {scroll-behavior: smooth; }
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    background-image: url(../websiteImages/backgroundWeb.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: black;
+}
+/* End of HTML Elements ==============================================================================================================================*/
+
+/* Div Elements ======================================================================================================================================*/
+#wrapper {
+    display: grid;
+
+    padding: 20px;
+    padding-top: 0px;
+    margin: 20px 10px 10px 10px;
+
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "hdr hdr"
+    "nav nav"
+    "ct1 ct2"
+    "brk1 brk1"
+    "wrp2 wrp2";
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    grid-area: hdr;
+
+    font-size: 25px;
+
+    padding-left: 15px;
+}
+
+#header > h1 {
+    text-align: left;
+    display: inline-block;
+
+    transition: 1s;
+
+    flex-grow: 8;
+}
+#nav {
+    grid-area: nav;
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+#nav > h2 > a {
+    font-style: normal;
+    text-decoration: none;
+
+    transition: 1s;
+
+    padding: 10px;
+}
+
+#content1 {
+    grid-area: ct1;
+
+    height: auto;
+}
+
+#content1 > p {
+    font-size: larger;
+
+    transition: 1s;
+
+    margin: 10px;
+    margin-left: 30px;
+    margin-right:45px;
+    padding: 15px;
+
+}
+
+#content1 > h2 {
+    padding-left: 20px;
+    margin-left: 30px;
+}
+
+#content2 {
+    grid-area: ct2;
+
+    height: auto;
+}
+
+#content2 > h2 {
+    padding-left: 10px;
+    margin-left: 30px;
+}
+
+#content2 > p {
+    font-size: larger;
+
+    transition: 1s;
+
+    margin: 10px;
+    margin-left: 20px;
+    margin-right:30px;
+    padding: 15px;
+}
+
+.break1 {
+    grid-area: brk1;
+}
+
+#wrapper2 {
+    display: grid;
+
+    grid-area: wrp2;
+
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-areas: 
+    "trp1 trp2 trp3";
+}
+
+.wrapper2Class {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.triplePt1 {
+    grid-area: trp1;
+    background-color: rgba(46, 45, 44, 0.2);
+
+    height: auto;
+
+    margin: 0px 10px 20px 10px;
+    
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.triplePt1 h2 {
+    padding-left: 20px;
+}
+
+.triplePt1 p {
+    font-size: larger;
+    padding-left: 20px;
+    padding-right: 13px;
+}
+
+.triplePt2 {
+    grid-area: trp2;
+    background-color: rgba(46, 45, 44, 0.2);
+
+    height: auto;
+
+    margin: 0px 10px 20px 10px;
+
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.triplePt2 h2 {
+    padding-left: 20px;
+}
+
+.triplePt2 p {
+    font-size: larger;
+    padding-left: 20px;
+    padding-right: 13px;
+}
+
+.triplePt3 {
+    grid-area: trp3;
+    background-color: rgba(46, 45, 44, 0.2);
+
+    height: auto;
+
+    margin: 0px 10px 20px 10px;
+
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.triplePt3 h2 {
+    padding-left: 20px;
+}
+
+.triplePt3 p {
+    font-size: larger;
+    padding-left: 20px;
+    padding-right: 13px;
+}
+
+.cont1Class {
+    font-family: 'Verdana';
+    height:auto
+}
+
+.headerClass {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#footerID {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.imageTrip {
+    display: flex;
+    justify-content: center;
+}
+/* End of Div Elements ==========================================================================================================*/
+
+/* Header Buttons ===============================================================================================================*/
+#headerDark {
+    transition: 0.5s;
+}
+
+#headerFontSizeUp {
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#headerFontSizeDown {
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#headerThemes {
+    transition: 0.5s;
+}
+
+.drkMode {
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 10px;
+    height: 40px;
+    width: 110px;
+}
+
+.drkMode:hover {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+
+.fsUp {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 10px;
+    height: 40px;
+    width: 110px;
+}
+
+.fsUp:hover {
+    font-size: 60%;
+}
+
+.fsUp:active {
+    background-color: lime;
+}
+
+.fsDown {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 10px;
+    height: 40px;
+    width: 110px;
+}
+
+.fsDown:active {
+    background-color: red;
+}
+
+.fsDown:hover {
+    font-size: 40%;
+}
+
+.themes {
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 40px;
+    width: 110px;
+}
+
+/* End of header buttons =================================================================================================================*/
+
+/* Drop Down Buttons =====================================================================================================================*/
+#terminalBtnID {
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+#sunsetBtnID {
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+#blueBtn {
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+#redBtn {
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+.dropBtnTerminal {
+    display: block;
+    color: black;
+    font-size: 15px;
+}
+
+.dropBtnSunset {
+    display: block;
+    color: black;
+    font-size: 15px;
+}
+
+.dropBtnBlue {
+    display: block;
+    color: black;
+    font-size: 15px;
+}
+
+.dropBtnRed {
+    display: block;
+    color: black;
+    font-size: 15px;
+}
+/* End of Drop Down Buttons ============================================================================================================ */
+
+
+/* Classes and IDs ======================================================================================================================*/
+.drop-content {
+    display: none;
+    position: absolute;
+    width: 110px;
+    background-color: white;
+    font-size: 30px;
+    z-index: 1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+    background-color: white;
+}
+
+.btnPlay {
+    transition: 0.5s;
+    height: 50px;
+    width: 250px;
+
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+
+    color: black;
+    background-color: rgb(232, 138, 44);
+
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.btnPlay:hover {
+    transform: scale(1.2);
+    width: 350px;
+
+    background-color: rgb(238, 255, 0);
+
+    border-radius: 25px;
+}
+
+.ct1Class {
+    color: black;
+    background-color: rgba(46, 45, 44, 0.2);
+    
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.ct2Class {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    background-color: rgba(46, 45, 44, 0.2);
+    height: max-content;
+
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.ct2Img {
+    transition: 1s;
+    padding: 10px; 
+    height: 200px; 
+    width: 200px;
+
+    margin-left: 35px;
+
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.ct2Img:first-child {
+    margin-left: 0px;
+}
+
+.ct2Img:last-child {
+    margin-right: 30px;
+}
+
+.tripleContent {
+    height: 200px;
+}
+
+.tripImg {
+    transition: 1s;
+    padding: 10px; 
+    height: 400px; 
+    width: 400px;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.triple {
+    display: table;
+    justify-content: center;
+}
+
+.navBtn:hover {
+    border-radius: 25px;
+}
+
+.navClass {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    color: black;
+    background-color: rgba(206,141,77,255);
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.navClass:hover {
+    background-color: chocolate;
+}
+
+.navText {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#backToTopID {
+    margin-bottom: 10px;
+}
+
+.backToTopClass {
+    color: black;
+    font-size: 20px;
+
+    transition: 0.5s;
+
+    background-color: rgba(84, 78, 72, 0.4);
+
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.backToTopClass:hover {
+    transform: scale(1.1);
+    background-color: rgba(84, 78, 72, 0.5);
+}
+/* End of Classes and Ids ================================================================================================ */
+
+/* Additional Styles ======================================================================================================*/
+
+/* The following css is organised by theme
+all themes change font, font color, border colorm, background images, font size*/
+
+/* Dark Mode =======================================================================*/
+.darkModeClass {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    background-image: url(../websiteImages/backgroundWebDark.png);
+    color: white;
+}
+
+.darkContent1 { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    color: white;
+}
+
+.darkContent1 > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    color: white;
+    border: 1px solid white;
+}
+
+.darkNav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    color: white;
+}
+
+.darkNav > h2 > a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    color: white;
+    background-color: darkslategrey;
+
+    border: 1px solid white;
+}
+
+.darkNav > h2 > a:hover {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background-color: grey;
+}
+
+.drkModeOn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.btnPlayDark {
+    transition: 0.5s;
+    height: 50px;
+    width: 250px;
+
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+
+    color: white;
+    background-color: rgb(56, 56, 56);
+
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.btnPlayDark:hover {
+    transform: scale(1.2);
+    width: 350px;
+
+    background-color: rgb(189, 189, 189);
+
+    border-radius: 25px;
+}
+
+.darkTrip {
+    transition: 1s;
+    border: 1px solid white;
+}
+
+.darkBackToTopClass {
+    color: white;
+    border: 1px solid white;
+}
+
+.snackBarDark {
+    font-size: 20px;
+    color: white;
+    min-width: 20px; 
+    margin-left: -72px; 
+    background-color: rgb(36, 36, 36);
+    text-align: center; 
+    border-radius: 20px; 
+    padding: 16px; 
+    position: fixed; 
+    left: 50%; 
+    bottom: 20px; 
+    border: 1px solid white;
+}
+
+.darkImages {
+    border: 1px solid white;
+}
+/* End of Dark Mode =================================================================*/
+
+/* Terminal Theme ================================================================== */
+
+.terminalClass {
+    position: absolute;
+    background-image: 
+    /* url(../websiteImages/vectorBezel.svg), */
+    url(../websiteImages/scanlines.png)
+    ;
+    background-size: cover;
+    background-color: green;
+    color: lime;
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    font-family: 'VT323';
+}
+
+.terminalNav {
+    font-family: 'VT323';
+    color: lime;
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+}
+
+.terminalNav > h2 > a {
+    color: lime;
+    background-color: rgb(21, 62, 26);
+    border: 1px solid lime;
+    font-family: 'VT323';
+}
+
+.terminalNav > h2 > a:hover {
+    background-color: gray;
+}
+
+.terminalCont1 {
+    font-family: 'VT323';
+    color: lime;
+}
+
+.terminalCont1 > p {
+    font-family: 'VT323';
+    color: lime;
+    border: 1px solid lime;
+    border-radius: 0px;
+}
+
+.terminalDarkBtn {
+    font-family: 'VT323';
+    text-align: center;
+}
+
+.pHdr1Terminal {
+    font-family: 'VT323';
+    font-size: 60px;
+}
+
+.headerTerminal {
+    font-family: 'VT323';
+}
+
+.terminalDarkBtn {
+    display: none;
+}
+
+.terminalText {
+    color: lime;
+    background-color: rgb(21, 62, 26);
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    border: 1px solid lime;
+}
+
+.terminalFsUp {
+    background-color: rgb(21, 62, 26);
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: lime;
+    border: 1px solid lime;
+    border-radius: 0px;
+    font-family: 'VT323';
+    font-size: 20px;
+    margin-right: 0px;
+}
+.terminalFsUp:hover { font-size: 25px; }
+
+.terminalFsDn {
+    background-color: rgb(21, 62, 26);
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: lime;
+    border: 1px solid lime;
+    border-radius: 0px;
+    font-family: 'VT323';
+    font-size: 20px;
+    margin-right: 0px;
+}
+.terminalFsDn:hover { font-size: 15px; }
+
+.terminalTheme {
+    background-color: rgb(21, 62, 26);
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: lime;
+    border: 1px solid lime;
+    border-radius: 0px;
+    font-family: 'VT323';
+    font-size: 20px;
+}
+
+.terminalNav {
+    color: Lime;
+    border-radius: 0px;
+}
+
+.btnPlayTerminal {
+    transition: 0.5s;
+    height: 60px;
+    width: 190px;
+
+    font-weight: bold;
+
+    background-color: rgba(21, 62, 26, 0.2);
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: lime;
+    border: 1px solid lime;
+    border-radius: 0px;
+    font-family: 'VT323';
+    font-size: 30px;
+}
+
+.btnPlayTerminal:hover {
+    background-color: rgba(21, 62, 26, 0.4);
+    color: lime;
+    font-size: 35px;
+    transform: scale(1.2);
+    width: 350px;
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+
+.termTrip {
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: lime;
+    border: 1px solid lime;
+    border-radius: 0px;
+    font-family: 'VT323';
+}
+
+.terminalSunset {
+    display: none;
+}
+
+.terminalBackTop {
+    background-color: rgba(21, 62, 26, 0.2);
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: lime;
+    border: 1px solid lime;
+    border-radius: 0px;
+    font-family: 'VT323';
+    font-size: 20px;
+    margin-right: 0px;
+}
+
+.snackbarTerm {
+    font-family: 'VT323';
+    font-size: 20px;
+    color: lime;
+    width: 120px;
+    margin-left: -80px; 
+    background-color: rgba(21, 62, 26, 0.9);
+    text-align: center; 
+    border-radius: 0px; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; 
+    bottom: 20px; 
+    border: 1px solid lime;
+}
+
+.terminalImages {
+    background-color: rgba(21, 62, 26, 0.2);
+    border: 1px solid lime;
+    border-radius: 0px;
+    margin-top: 30px;
+}
+
+.terminalTripImg {
+    background-color: rgba(21, 62, 26, 0.2);
+    border: 1px solid lime;
+    border-radius: 0px;
+}
+/* End of Terminal Theme ==================================================== */
+
+/* Sunset theme */
+
+.sunsetClass {
+    position: absolute;
+    background-image: 
+    url(../websiteImages/backgroundWebSunset.png)
+    ;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+.sunsetNav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 0px 0 0px;
+}
+
+.sunsetNav > h2 > a {
+    transition: 1s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background: linear-gradient(to top, rgb(223, 47, 223), rgb(233, 216, 157));
+    border: 1px solid black;
+}
+
+.sunsetNav > h2 > a:hover {
+    background: linear-gradient(to top, rgb(242, 118, 242), rgb(233, 216, 157));
+}
+
+.sunsetCont1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(254, 218, 254);
+}
+
+.sunsetCont1 > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 226, 255);
+    border: 1px solid rgb(63, 9, 63);
+    border-radius: 25px;
+}
+
+.sunsetDarkBtn {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sunsetDarkBtn {
+    display: none;
+}
+
+.sunsetText {
+    display: none;
+}
+
+.sunsetFsUp {
+    background-image: linear-gradient(to top, rgb(223, 47, 223), rgb(233, 216, 157));
+    color: white;
+    border: 1px solid black;
+    font-family: 'Verdana';
+    margin-right: 10px;
+}
+.sunsetFsUp:hover { 
+    font-size: 20px; 
+}
+
+.sunsetFsDn {
+    background-image: linear-gradient(to top, rgb(223, 47, 223), rgb(233, 216, 157));
+    color: white;
+    border: 1px solid black;
+    font-family: 'Verdana';
+    margin-right: 10px;
+}
+.sunsetFsDn:hover { font-size: 10px; }
+
+.sunsetTheme {
+    background-image: linear-gradient(to top, rgb(223, 47, 223), rgb(233, 216, 157));
+    color: white;
+    border: 1px solid black;
+    font-family: 'Verdana';
+}
+
+.btnPlaySunset {
+    transition: 0.5s;
+    height: 50px;
+    width: 250px;
+
+    font-weight: bold;
+
+    background: linear-gradient(to top, rgb(223, 47, 223), rgb(233, 216, 157));
+    text-shadow: none;
+    color: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+.btnPlaySunset:hover {
+    color: white;
+    font-size: 30px;
+    transform: scale(1.2);
+    width: 350px;
+    }
+
+.sunsetTrip {
+    color: rgb(254, 218, 254);
+    border: 1px solid black;
+}
+
+.sunsetTextBtn {
+    color: white;
+    background-color: rgb(227, 134, 227);
+
+    border: 1px solid black;
+}
+
+.sunsetBackTop {
+    border: 1px solid black;
+    color: rgb(255, 226, 255);
+}
+
+.snackBarSun {
+    font-family: 'Verdana';
+    font-size: 20px;
+    color: White;
+    width: 150px; 
+    margin-left: -93px; 
+    background: linear-gradient(to top, rgb(223, 47, 223), rgb(233, 216, 157));
+    text-align: center; 
+    border-radius: 20px; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; 
+    bottom: 20px; 
+    border: 1px solid white;
+}
+/* End of Sunset theme */
+
+/* Blue theme */
+
+.blueClass {
+    position: absolute;
+    background-image: 
+    url(../websiteImages/backgroundWebBlue.png);
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+.blueNav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 0px 0 0px;
+}
+
+.blueNav > h2 > a {
+    transition: 1s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: rgb(37, 108, 214);
+    border: 1px solid black;
+}
+
+.blueNav > h2 > a:hover {
+    background-color: rgb(83, 210, 248);
+}
+
+.blueCont1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.blueCont1 > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25px;
+}
+
+.blueDarkBtn {
+    display: none;
+}
+
+.blueText {
+    display: none;
+}
+
+.blueFsUp {
+    background-image: linear-gradient(to top, rgb(47, 88, 223), rgb(95, 212, 233));
+    color: white;
+    border: 1px solid black;
+    font-family: 'Verdana';
+    margin-right: 10px;
+}
+.blueFsUp:hover { 
+    font-size: 20px; 
+}
+
+.blueFsDn {
+    background-image: linear-gradient(to top, rgb(47, 88, 223), rgb(95, 212, 233));
+    color: white;
+    border: 1px solid black;
+    font-family: 'Verdana';
+    margin-right: 10px;
+}
+.blueFsDn:hover { font-size: 10px; }
+
+.blueTheme {
+    background-image: linear-gradient(to top, rgb(47, 88, 223), rgb(95, 212, 233));
+    color: white;
+    border: 1px solid black;
+    font-family: 'Verdana';
+}
+
+.btnPlayBlue {
+    transition: 0.5s;
+    height: 50px;
+    width: 250px;
+
+    font-weight: bold;
+
+    background-image: linear-gradient(to top, rgb(47, 88, 223), rgb(95, 212, 233));
+    text-shadow: none;
+    color: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+.btnPlayBlue:hover {
+    color: white;
+    font-size: 30px;
+    transform: scale(1.2);
+    width: 350px;
+    }
+
+.btnNone {
+    display: none;
+}
+
+.blueTrip {
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+
+.blueTextBtn {
+    color: white;
+    background-color: rgb(61, 64, 250);
+
+    border: 1px solid black;
+}
+
+.blueBackTop {
+    border: 1px solid black;
+    color: rgb(255, 226, 255);
+}
+
+.snackBarBlue {
+    font-family: 'Verdana';
+    font-size: 20px;
+    color: White;
+    width: 150px; 
+    margin-left: -93px; 
+    background-color: rgba(57, 2, 255, 0.9);
+    text-align: center; 
+    border-radius: 20px; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; 
+    bottom: 20px; 
+    border: 1px solid white;
+}
+
+/* End of blue theme */
+
+/* Red Theme */
+.redClass {
+    position: absolute;
+    background-image: 
+    url(../websiteImages/backgroundRed.png);
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+.redNav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 0px 0 0px;
+}
+
+.redNav > h2 > a {
+    transition: 1s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: rgb(193, 13, 13);
+    border: 1px solid black;
+}
+
+.redNav > h2 > a:hover {
+    background-color: rgb(116, 18, 18);
+}
+
+.redCont1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.redCont1 > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25px;
+}
+
+.redDarkBtn {
+    display: none;
+}
+
+.redText {
+    display: none;
+}
+
+.redFsUp {
+    background-image: linear-gradient(to top, rgb(223, 47, 47), rgb(109, 13, 13));
+    color: white;
+    border: 1px solid black;
+    font-family: 'Verdana';
+    margin-right: 10px;
+}
+.redFsUp:hover { 
+    font-size: 20px; 
+}
+
+.redFsDn {
+    background-image: linear-gradient(to top, rgb(223, 47, 47), rgb(109, 13, 13));
+    color: white;
+    border: 1px solid black;
+    font-family: 'Verdana';
+    margin-right: 10px;
+}
+.redsDn:hover { font-size: 10px; }
+
+.redTheme {
+    background-image: linear-gradient(to top, rgb(223, 47, 47), rgb(109, 13, 13));
+    color: white;
+    border: 1px solid black;
+    font-family: 'Verdana';
+}
+
+.btnPlayRed {
+    transition: 0.5s;
+    height: 50px;
+    width: 250px;
+
+    font-weight: bold;
+
+    background-image: linear-gradient(to top, rgb(223, 47, 47), rgb(109, 13, 13));
+    text-shadow: none;
+    color: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+.btnPlayRed:hover {
+    color: white;
+    font-size: 30px;
+    transform: scale(1.2);
+    width: 350px;
+    }
+
+.btnNone {
+    display: none;
+}
+
+.RedTrip {
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+
+.redTextBtn {
+    color: white;
+    background-color: rgb(198, 44, 44);
+
+    border: 1px solid black;
+}
+
+.redBackTop {
+    border: 1px solid black;
+    color: rgb(255, 226, 255);
+}
+
+.snackBarRed {
+    font-family: 'Verdana';
+    font-size: 20px;
+    color: White;
+    width: 150px; 
+    margin-left: -93px; 
+    background-color: rgba(255, 2, 2, 0.9);
+    text-align: center; 
+    border-radius: 20px; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; 
+    bottom: 20px; 
+    border: 1px solid white;
+}
+
+
+/* End of red theme */
+
+/* End of additional styles ================================================================================= */
+
+/* Media Queries =============================================================================================*/
+@media screen and (max-width: 1700px) {
+    .terminalImages {
+        width: 100px;
+        height: 100px;
+        margin-top: 70px;
+    }
+
+    .ct2Img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tripleContent {
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    
+    .tripImg {
+        height: auto; 
+        width: 75%;
+        
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1590px) {
+    .terminalImages {
+        width: 80px;
+        height: 80px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1605px) {
+    .ct2Img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .ct2Img {
+        margin-right: 5px;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+    
+    .ct2Img:first-child {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .ct2Img:last-child {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .ct2Img {
+        margin-right: 0px;
+        border-radius: 10px;
+        border: 1px solid black;
+        width: 120px;
+        height: 120px;
+    }
+    
+    .ct2Img:first-child {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .ct2Img:last-child {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1390px) {
+    .tripImg {
+        height: auto; 
+        width: 60%;
+        
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 1303px) {
+    .ct2Img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 1395px) {
+    .ct2Img {
+        margin-right: 0px;
+        border-radius: 10px;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .ct2Img:first-child {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .ct2Img:last-child {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1303px) {
+    .ct2Img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 1303px) {
+    .ct2Img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .tripImg {
+        height: auto; 
+        width: 50%;
+        
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    .tripleContent {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .tripImg {
+        height: auto; 
+        width: 60%;
+        
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+
+    .tripleContent {
+        font-size: small;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navClass { 
+        width:min-content;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #wrapper {
+        display: grid;
+    
+        padding: 20px;
+        margin: 20px 10px 10px 10px;
+    
+        grid-template-columns: 100%;
+        /* Changes the grid template areas depending the max width of the screen
+        all of the areas are changed from being in 2 columns to 1 column */
+        grid-template-areas: 
+        "hdr"
+        "nav"
+        "ct1"
+        "ct2"
+        "brk1"
+        "wrp2";
+    }
+
+    #wrapper2 {
+        display: grid;
+    
+        grid-area: wrp2;
+    
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "trp1" 
+        "trp2"
+        "trp3";
+    }
+
+    #content1 > p {
+        font-size: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    #content1 > h2 {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+
+    #content2 > h2 {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+
+    #content2 > p {
+        font-size: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #header > h1 {
+        font-size: 50px;
+    }
+
+    #nav > h2 {
+        font-size: 20px;
+    }
+
+    .ct2Img {
+        margin-right: 0px;
+        border-radius: 10px;
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .ct2Img:first-child {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .ct2Img:last-child {
+        margin-right: 20px;
+    }
+
+    .tripImg {
+        height: auto; 
+        width: 40%;
+        
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .tripleContent {
+        font-size: small;
+        margin-bottom: 0px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 989px) {
+    #nav > h2 {
+        font-size: 20px;
+    }
+
+    .ct2Img {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .drkMode {
+        height: 35px;
+        width: 70px;
+        font-size: 10px;
+    }
+
+    .fsUp {
+        height: 35px;
+        width: 70px;
+        font-size: 10px;
+    }
+
+    .fsDown {
+        height: 35px;
+        width: 70px;
+        font-size: 10px;
+    }
+
+    .themes {
+        height: 35px;
+        width: 70px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .ct2Img {
+      
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 855px) {
+    #nav > h2 {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+   
+
+    #header > h1 {
+        font-size: 30px;
+    }
+
+    #nav > h2 {
+        font-size: 15px;
+    }
+
+    .navBtn {
+        font-size: 10px;
+        height: 30px;
+        width: 70px;
+    }
+
+    .ct2Img {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .ct2Img {
+      
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 688px) {
+    #nav > h2 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .tripImg {
+        height: auto; 
+        width: 30%;
+        
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+
+    .tripleContent {
+        font-size: medium;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #header > h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 605Px) {
+    #nav > h2 {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 530Px) {
+    #nav > h2 {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .tripImg {
+        height: auto; 
+        width: 30%;
+        
+        margin-top: 120px;
+        margin-bottom: 20px;
+    }
+
+    .tripleContent {
+        font-size: medium;
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    #content1 > p {
+        font-size: 12px;
+    }
+
+    #content2 > p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 470Px) {
+    #nav > h2 {
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width: 412px) {
+    #nav > h2 {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 328px) {
+    #nav > h2 {
+        font-size: 5px;
+    }
+}
+
+/* End of Media Queries ============================================================================ */
+
+/* Snack bar */
+#snackbar {
+    visibility: hidden;
+    display: flex;
+    justify-content:center ;
+  }
+
+.snackbarclass {
+    min-width: 250px;
+    margin-left: -125px; 
+    background-color: #333; 
+    text-align: center; 
+    border-radius: 2px; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; 
+    bottom: 30px; 
+}
+/* End of snack bar */
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 20px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 20px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 20px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 20px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

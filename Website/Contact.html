@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Contact Us</title>
+      <link rel='stylesheet' type ='text/css' href='css/stylesheetContact.css'>
+    </head>
+    <style>
+
+    </style>
+    <div id="header"> 
+        <h1>Contact Us </h1>
+                <button onclick="darkMode()" id = "headerDark" class = "drkMode">Dark Mode</button>
+                <button onclick="fontSizeUp()" id = "headerFontSizeUp" class = "fsUp">FontSize++</button>
+                <button onclick="fontSizeDown()" id = "headerFontSizeDown" class = "fsDown">FontSize--</button>
+                    <div class = "dropdown">
+
+                        <button id = "headerThemes" class = "themes">Themes</button>
+
+                            <div class = "drop-content">
+
+                                <a onclick = "terminal()" id = "terminalBtnID" class = "dropBtnTerminal">Terminal</a>
+                                <a onclick = "sunset()" id = "sunsetBtnID" class = "dropBtnSunset">Sunset</a>
+                                <a onclick = "blue()" id = "blueBtn" class = "dropBtnBlue">Blue</a>
+                                <a onclick = "web()" id = "webBtn" class = "dropBtnWeb">Web</a>
+
+                            </div>
+            
+                    </div>
+                </div>
+            <div id="wrapper">
+            
+                <div id="nav">
+                    <h2>
+                        <a href = "Home.html" id = "homeBtn" class = "navBtn">Home</a>
+
+                        <a href = "../Game/game.html" id = "gameBtn" class = "navBtn">Game</a>
+                        <a href = "About.html" id = "aboutBtn" class = "navBtn">About</a>
+                        <a href = "Contact.html" id = "contactBtn" class = "navBtn">Contact</a>
+                        <a href="GameInstruction.html" id="instBtn" class="navBtn">Instructions</a>
+
+                    </h2>
+                </div>
+            </div>
+            
+        </head>
+    <body>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+  
+        <button type="submit">Submit</button>
+      </form>
+    </body>
+  
+    <script>
+        var body = document.body;
+        var hdr = document.getElementById('header');
+        var darkmodeButon = document.getElementById('headerDark');
+        var thm = document.getElementById('headerThemes');
+        var nav = document.getElementsByClassName('navBtn');
+        var hrs = document.getElementsByTagName('hr');
+        var fsUp = document.getElementById('headerFontSizeUp');
+        var fsDn = document.getElementById('headerFontSizeDown');
+
+            // buttons variables
+        var darkmodeButton = document.getElementById('headerDark');
+        var btnterm = document.getElementById('terminalBtnID');
+        var btnsunset = document.getElementById('sunsetBtnID');
+        var btnblue = document.getElementById('blueBtn');
+        var btnweb = document.getElementById('webBtn');
+
+        
+        var counter = 1;
+
+            
+        function darkMode() {
+            body.classList.toggle('darkBody');
+            darkmodeButton.classList.toggle('darkModeBtnClass');
+            if (counter % 2 == 1) {
+                document.getElementById('headerThemes').style.display = "none";
+                } else if (counter % 2 == 0) {
+                    document.getElementById('headerThemes').style.display = "inline-block";
+                }
+                counter++;
+            }
+
+            
+        function sunset() {
+            body.classList.toggle('sunsetBody');
+            darkmodeButton.classList.toggle('btnNone');
+            if (counter % 2 == 1) {
+                btnred.style.display = "none";
+                btnblue.style.display = "none";
+                btnterm.style.display = "none";
+            } else if (counter % 2 == 0) {
+                btnred.style.display = "block";
+                btnblue.style.display = "block";
+                btnterm.style.display = "block";
+            }
+                counter++;
+            }
+
+            // function to toggle terminal web theme
+            function terminal() {
+                //to toggle all the styling of each element for the terminal theme
+                body.classList.toggle('termBody');
+                hdr.classList.toggle('termHdr');
+
+                //to toggle hiding all the drop down options, and show only terminal and it's styling in 'termModeBtnClass'
+                darkmodeButton.classList.toggle('btnNone');
+                btnweb.classList.toggle('btnNone');
+                btnblue.classList.toggle('btnNone');
+                btnterm.classList.toggle('termModeBtnClass');
+
+                //to toggle certain styling to elements 
+                //for each card toggle the styling code in 'termcards'
+                for (let i = 0; i < cards.length; i++) {
+                    cards[i].classList.toggle('termCards')
+                }
+
+                for (let i = 0; i < infos.length; i++) {
+                    infos[i].classList.toggle('termInfos');
+                }
+
+                for (let i = 0; i < nav.length; i++) {
+                    nav[i].classList.toggle('termNav')
+                }
+                
+                for (let i = 0; i < hrs.length; i++) {
+                    hrs[i].classList.toggle('termHr');
+                }
+
+                //to toggle the styling to the font size up and down buttons
+                fsUp.classList.toggle('termFs');
+                fsDn.classList.toggle('termFs');
+
+                if (counter % 2 == 1) {
+                    btnred.style.display = "none";
+                    btnblue.style.display = "none";
+                    btnweb.style.display = "none";
+
+                } else if (counter % 2 == 0) {
+                    btnred.style.display = "block";
+                    btnblue.style.display ="block";
+                    btnweb.style.display ="block";
+                }
+                counter++;
+            }
+
+            //function to toggle  web theme
+            function web() {
+                //to toggle the 'webbody' class, hiding default image
+                body.classList.toggle('webBody');
+
+                    //to toggle hiding all the drop down options, except red body so when option is clicked again it converts back to default
+                darkmodeButton.classList.toggle('btnNone');
+                btnblue.classList.toggle('btnNone');
+                btnterm.classList.toggle('btnNone');
+
+                if (counter % 2 == 1) {
+                    btnterm.style.display = "none";
+                    btnblue.style.display = "none";
+                    btnweb.style.display = "none";
+
+                    } else if (counter % 2 == 0) {
+                        btnterm.style.display = "block";
+                        btnblue.style.display = "block";
+                        btnred.style.display = "block";
+                    }
+                    counter++;
+            }
+
+            //function to toggle blue web theme
+            function blue() {
+                //to toggle the 'bluebody' class, hiding default image
+                body.classList.toggle('blueBody');
+                darkmodeButton.classList.toggle('btnNone');
+                btnred.classList.toggle('btnNone');
+                btnterm.classList.toggle('btnNone');
+
+                if (counter % 2 == 1) {
+                    btnterm.style.display = "none";
+                    btnred.style.display = "none";
+                    btnweb.style.display = "none";
+
+                } else if (counter % 2 == 0) {
+                    btnterm.style.display = "block";
+                    btnred.style.display = "block";
+                    btnweb.style.display = "block";
+                    }
+                    counter++;
+                }
+                
+            
+            function fontSizeUp() {
+                var el = document.getElementById('wrapper');
+                var hd = document.getElementById('header');
+
+                styleEl = window.getComputedStyle(el).getPropertyValue('font-size');
+                styleHd = window.getComputedStyle(hd).getPropertyValue('font-size');
+
+                fontsizeEl = parseFloat(styleEl);
+                fontsizeHd = parseFloat(styleHd);
+
+                el.style.fontSize = (fontsizeEl + 1) + 'px';
+                hd.style.fontSize = (fontsizeHd + 1) + 'px';
+            }
+                
+                
+            function fontSizeDown() {
+                var el = document.getElementById('wrapper');
+                var hd = document.getElementById('header');
+
+                styleEl = window.getComputedStyle(el).getPropertyValue('font-size');
+                styleHd = window.getComputedStyle(hd).getPropertyValue('font-size');
+
+                fontsizeEl = parseFloat(styleEl);
+                fontsizeHd = parseFloat(styleHd);
+
+                el.style.fontSize = (fontsizeEl - 1) + 'px';
+                hd.style.fontSize = (fontsizeHd - 1) + 'px';
+            }          
+            
+        const form = document.getElementById("contact-form");
+    
+        form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        
+        const name = form.elements["name"].value;
+        const email = form.elements["email"].value;
+        const message = form.elements["message"].value;
+
+        console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+        
+        form.reset();
+        });
+    </script>
+</html>

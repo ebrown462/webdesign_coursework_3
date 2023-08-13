@@ -1,0 +1,207 @@
+body {
+    background-color: rgb(128, 121, 124);
+  
+      background-image: url(../websiteImages/backgroundWebBlue.png);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  
+      color: white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    padding-left: 50px;
+    padding-top: 10px;
+  
+    grid-area: hdr;
+  
+    display: flex;
+    align-items: center;
+  }
+  
+  #wrapper {
+   display: grid;
+  
+   grid-template-columns: 40% 60%;
+   grid-template-areas: 
+   "hdr hdr"
+   "nav nav"
+   "cont1 cont1"
+   ;
+  }
+  
+  #nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+  
+    grid-area: nav;
+  }
+  
+  .navBtn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+    color: white;
+    background-color: rgb(78, 75, 75);
+    border: white 1px solid;
+    border-radius: 20px;
+  } 
+  
+  #nav > h2 > a {
+    font-style: normal;
+    text-decoration: none;
+    margin-bottom: 10px; 
+    padding: 10px;
+  }
+  
+  .navBtn:hover {
+    transition: 3s;
+    background-color: rgba(209, 149, 149);
+  }
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  .cont1Class {
+    padding-left: 10px;
+    margin-left: 20px;
+
+    padding-right: 10px;
+    margin-right: 20px;
+
+    grid-area: cl1;
+}
+  #header > h1 {
+    text-align: left;
+    display: inline-block;
+  
+    transition: 1s;
+  
+    flex-grow: 8; 
+  }
+  
+  .drkMode {
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 10px;
+  
+  }
+  
+  .drkMode:hover {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+  }
+  
+  .fsUp {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 10px;
+  
+  }
+  
+  .fsUp:hover {
+    font-size: 60%;
+  }
+  
+  .fsUp:active {
+    background-color: lime;
+  }
+  
+  .fsDown {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 10px;
+  
+  }
+  
+  .fsDown:active {
+    background-color: red;
+  }
+  
+  .fsDown:hover {
+    font-size: 40%;
+  }
+  
+  #headerDark {
+    transition: 0.5s;
+    height: 40px;
+    width: 110px;
+  }
+  
+  #headerFontSizeUp {
+    display: inline-block;
+    transition: 0.5s;
+    height: 40px;
+    width: 110px;
+  }
+  
+  #headerFontSizeDown {
+    display: inline-block;
+    transition: 0.5s;
+    height: 40px;
+    width: 110px;
+  }
+  /* Dark Mode */
+  
+  .darkBody {
+    background-image: url(../websiteImages/backgroundWebDark.png);
+  }
+  
+  .darkModeBtnClass {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+  }
+  
+  .btnNone {
+    display: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    height: 40px;
+    width: 110px;
+  }
+  
+  
+  @media screen and (max-width: 550px) {
+    .navBtn {
+        font-size: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 510px) {
+   #header {
+    font-size: 15px;
+   }
+  
+   #header > h1 {
+    margin-right: 10px;
+   }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .navBtn {
+        font-size: 8px;
+    }
+  
+    #header {
+        padding: 10px;
+        margin-right: 5px;
+       }
+  }

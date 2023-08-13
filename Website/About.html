@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+    <html>
+
+        <head>
+            <title>About Us Page</title>
+
+            <!-- to link this html file to the About Page CSS stylesheet -->
+            <link rel='stylesheet' type='text/css' href='css/stylesheetAbout.css'>
+
+            <!-- changing the favicon on the browser website tab -->
+            <link rel = "icon" type = "image/x-icon" href = "../Website/websiteImages/faviconCroccy.png">
+        </head>
+
+        <body> 
+          
+            <!-- div for header -->
+            <div id="header" class = "hdrClass"> 
+                <h1>About Us Page</h1>
+
+                    <!-- button to toggle dark mode on click-->
+                    <button onclick="darkMode()" id = "headerDark" class = "drkMode">Dark Mode</button>
+
+                    <!-- button to execute function for font go up in size on click -->
+                    <button onclick="fontSizeUp()" id = "headerFontSizeUp" class = "fsUp">FontSize++</button>
+
+                    <!-- button to execute function for font to go down in size on click -->
+                    <button onclick="fontSizeDown()" id = "headerFontSizeDown" class = "fsDown">FontSize--</button>
+
+                <!-- div for dropdown menu for themes button -->
+                <div class = "dropdown">
+                    <!-- Themes button -->
+                    <button id = "headerThemes" class = "themes">Themes</button>
+                        <!-- div for menu options -->
+                        <div class = "drop-content">
+                            <!-- Toggles the Terminal theme on click by and executes function to switch to Terminal theme -->
+                            <a onclick = "terminal()" id = "terminalBtnID" class = "dropBtnTerminal">Terminal</a>
+
+                            <!-- Toggles the Terminal theme on click by and executes function to switch to normal Web theme (Bg only) -->
+                            <a onclick = "web()" id = "webBtnID" class = "dropBtnWeb">Web</a>
+
+                            <!-- Toggles the Terminal theme on click by and executes function to switch to Blue theme (Bg only) -->
+                            <a onclick = "blue()" id = "blueBtn" class = "dropBtnBlue">Blue</a>
+
+                            <!-- Toggles the Terminal theme on click by and executes function to switch to Red theme (Bg only) -->
+                            <a onclick = "red()" id = "redBtn" class = "dropBtnRed">Red</a>
+                        </div>
+                    </div>
+            </div>
+            
+            <!-- wrapper tag to contain all the content except header -->
+            <div id="wrapper">
+            
+                <!-- div for the navigation bar -->
+                <div id="nav">
+                    <h2>
+                        <!-- Link to the Home Page -->
+                        <a href = "Home.html" id = "homeBtn" class = "navBtn">Home</a> 
+
+                        <!-- Link to the Game Page -->
+                        <a href = "../Game/game.html" id = "gameBtn" class = "navBtn">Game</a>
+
+                        <!-- Link to the About Page -->
+                        <a href = "About.html" id = "aboutBtn" class = "navBtn">About</a>
+
+                        <!-- Link to the Contact Page -->
+                        <a href = "Contact.html" id = "contactBtn" class = "navBtn">Contact</a>
+
+                        <!-- Link to Game Instruction Page -->
+                        <a href="GameInstruction.html" id="instBtn" class="navBtn">Instruction</a>
+
+                    </h2>
+                </div>
+
+                <!-- div for the content: general info and welcome -->
+                <div id="content1" class="cont1Class">
+                    <h2 id="headerct1" class="headerct1">Hi, </h2>
+                    <p id = "pInfo" class="infoBox"> Welcome to the About Us Page! <br /> <br />
+                        Here we mention and display the people in our web development project group (Group 7), and their roles in the development of the game and webpages.
+                    <br /> <br />
+                        In the section the right - it highlights what each person has specifically worked on for the Web Project.
+                    </p>
+                </div>
+
+                <!-- div for content: group 7 members -->
+                <div id="content2" class="cont2Class">
+                    <div id = "grp7" class="Group7_Members">
+
+                        <h1 id="headerct2" class="headerct2">Group 7 Members:</h1>
+                        <span class="popuptext" id="myPopup"><i>Scroll to see members</i></span>
+                        <hr class = "hrClass" />
+
+                        <div class="card">
+                                <div class="image">
+                                <img  height="130px"; src="websiteImages\GustasPfp.png"> 
+                                </div>
+                                
+                                <div class="info">
+                                <h2>Gustas Vilimas</h2>
+                                <hr class = "hrClass2"/>
+                                
+                                <p><b><i>Web Developer: Home Page, and Home & Game Themes</i></b></p>
+                                <p>Responsible for coding and creating the Home Page (HTML, CSS, JS), and adding features to the Game Page (CSS and themes with JS, and adding story to the JS file)</p>
+                                <br />
+                                <br />
+                                </div>
+                        </div>
+
+                        <!-- added a class to a thematic break so that it changed upon selected theme -->
+                        <hr class = "hrClass"/>
+
+                        <!-- pofile cards of the members -->
+                        <div class="card">
+                            <div class="image">
+                                <!-- adding a profile picture for each member -->
+                                <!-- hard coding height and getting the image source -->
+                                <img  height="130px"; src="websiteImages\EwanPfp.png"> 
+                                </div>
+                                
+                                <div class="info">
+                                <h2>Ewan Brown</h2>
+                                <hr class = "hrClass2"/>
+                                
+                                <p><b><i>Mini-Games Programmer</i></b></p>
+                                <p>Responible for coding the the mini-games on the Game Page (HTML, CSS, JS), and adding and creating the music </p>
+                                <br />
+                                <br />
+                                </div>      
+                        </div>
+
+                        <hr class = "hrClass"/>
+
+                        <div class="card">
+                            <div class="image">
+                                <img  height="130px"; src="websiteImages\LeePfp.png"> 
+                                </div>
+                                
+                                <div class="info">
+                                <h2>Lee Lennox</h2>
+                                <hr class = "hrClass2"/>
+                                <p><b><i>Game Programmer</i></b></p>
+                                <p>Involved in coding for the game; Game Page JS, formatting the game screen (All of JS for game logic), and API Integration</p>
+                                <br />
+                                <br />
+                                </div>
+                        </div>
+
+                        <hr class = "hrClass"/>
+
+                        <div class="card">
+                            <div class="image">
+                                <img  height="130px"; src="websiteImages\EnyaPfp.png"> 
+                                </div>
+                                
+                                <div class="info">
+                                <h2>Enya Celestial</h2>
+                                <hr class = "hrClass2"/>
+                                <p><b><i>Art and Graphics Designer & Web Developer: About Page</i></b></p>
+                                <p>Involved in making some artwork for game and web themes, the About Us Page (HTML, CSS, JS) and game story</p>
+                                <br />
+                                <br />
+                                </div>
+                        </div>
+
+                        <hr class = "hrClass"/>
+
+                        <div class="card">
+                            <div class="image">
+                                <img  height="130px"; src="websiteImages\PinkyPfp.png"> 
+                                </div>
+                                
+                                <div class="info">
+                                <h2>Htoo Khin</h2>
+                                <hr class = "hrClass2"/>
+                                <p><b><i>Web Developer: Contact and Instruction Page</i></b></p>
+                                <p>Responsible for the HTML, CSS, and JavaScript elements on the Contact and Instruction Page</p>
+                                <br />
+                                <br />
+                                </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </body>
+
+        <script> 
+            // variables needed for functions
+
+            // website formating variables
+            var body = document.body;
+            var hdr = document.getElementById('header');
+            var thm = document.getElementById('headerThemes');
+            var grp7 = document.getElementById('content2');
+            var pInfo = document.getElementById('pInfo');
+            var cards = document.getElementsByClassName('card');
+            var infos = document.getElementsByClassName('info');
+            var nav = document.getElementsByClassName('navBtn');
+            var hrs = document.getElementsByTagName('hr');
+            var fsUp = document.getElementById('headerFontSizeUp');
+            var fsDn = document.getElementById('headerFontSizeDown')
+
+            // buttons variables
+            var darkmodeButton = document.getElementById('headerDark');
+            var btnterm = document.getElementById('terminalBtnID');
+            var btnweb = document.getElementById('webBtnID');
+            var btnblue = document.getElementById('blueBtn');
+            var btnred = document.getElementById('redBtn')
+
+            // counter global variable - counter is initialised to 1; hard set to odd
+            //this continues increase as Themes are clicked on and changed
+            var counter = 1;
+
+            // function to toggle darkmode for website
+            function darkMode() {
+                // body.classList.toggle - takes body of website and toggles to what in the class 'darkbody', hiding the default bg img
+                body.classList.toggle('darkBody');
+
+                //gets dark mode button and toggles the class'darkModeBtnClass'
+                darkmodeButton.classList.toggle('darkModeBtnClass');
+
+                //when counter is 1 (when user first clicks on)
+                if (counter % 2 == 1) {
+                    //hides the Themes button and options
+                    document.getElementById('headerThemes').style.display = "none";
+                } else if (counter % 2 == 0) {
+                    //re-displays Themes button and options whe returning to default screen
+                    document.getElementById('headerThemes').style.display = "inline-block";
+                }
+                //added 1 to the counter regardless (to allow for re-display of the themes button)
+                counter++;
+            }
+
+            // function to toggle normal web theme 
+            function web() {
+                // get the website body and displays what's in the webBody class; the normal web theme bg
+                body.classList.toggle('webBody');
+                //to hide the dark mode button when the page is selected
+                darkmodeButton.classList.toggle('btnNone');
+
+                //when counter is 1 (when user first clicks on) for this page, as well as the red and blue page
+                if (counter % 2 == 1) {
+                    //hides the drop down options in themes except the selected theme
+                    btnred.style.display = "none";
+                    btnblue.style.display = "none";
+                    btnterm.style.display = "none";
+
+                } else if (counter % 2 == 0) {
+                    //re-displays the drop down options in themes except the selected theme
+                    btnred.style.display = "block";
+                    btnblue.style.display = "block";
+                    btnterm.style.display = "block";
+                }
+                counter++;
+            }
+
+            // function to toggle terminal web theme
+            function terminal() {
+                //to toggle all the styling of each element for the terminal theme
+                body.classList.toggle('termBody');
+                hdr.classList.toggle('termHdr');
+                grp7.classList.toggle('termGroup');
+                pInfo.classList.toggle('termGroup2');
+
+                //to toggle hiding all the drop down options, and show only terminal and it's styling in 'termModeBtnClass'
+                darkmodeButton.classList.toggle('btnNone');
+                btnred.classList.toggle('btnNone');
+                btnblue.classList.toggle('btnNone');
+                btnterm.classList.toggle('termModeBtnClass');
+
+                //to toggle certain styling (classes) to elements 
+
+                //for each card element take the class and toggle the styling code in 'termcards' //an element class name is stored in an array 
+                for (let i = 0; i < cards.length; i++) {
+                    cards[i].classList.toggle('termCards')
+                }
+
+                for (let i = 0; i < infos.length; i++) {
+                    infos[i].classList.toggle('termInfos');
+                }
+
+                for (let i = 0; i < nav.length; i++) {
+                    nav[i].classList.toggle('termNav')
+                }
+                
+                //for each hr element listed in the array, loop through each class name and gets the element to toggle
+                for (let i = 0; i < hrs.length; i++) {
+                    hrs[i].classList.toggle('termHr');
+                }
+
+                //to toggle the styling to the font size up and down buttons
+                fsUp.classList.toggle('termFs');
+                fsDn.classList.toggle('termFs');
+
+                //takes aw
+                if (counter % 2 == 1) {
+                    btnred.style.display = "none";
+                    btnblue.style.display = "none";
+                    btnweb.style.display = "none";
+
+                } else if (counter % 2 == 0) {
+                    btnred.style.display = "block";
+                    btnblue.style.display ="block";
+                    btnweb.style.display ="block";
+                }
+                counter++;
+            }
+
+            //function to toggle red web theme
+            function red() {
+                //to toggle the 'redbody' class, hiding default image
+                body.classList.toggle('redBody');
+
+                //to toggle hiding all the drop down options, except red body so when option is clicked again it converts back to default
+                darkmodeButton.classList.toggle('btnNone');
+                btnblue.classList.toggle('btnNone');
+                btnterm.classList.toggle('btnNone');
+
+                if (counter % 2 == 1) {
+                    btnterm.style.display = "none";
+                    btnblue.style.display = "none";
+                    btnweb.style.display = "none";
+
+                } else if (counter % 2 == 0) {
+                    btnterm.style.display = "block";
+                    btnblue.style.display = "block";
+                    btnweb.style.display = "block";
+                }
+                counter++;
+            }
+
+            //function to toggle blue web theme
+            function blue() {
+                //to toggle the 'bluebody' class, hiding default image
+                body.classList.toggle('blueBody');
+                darkmodeButton.classList.toggle('btnNone');
+                btnred.classList.toggle('btnNone');
+                btnterm.classList.toggle('btnNone');
+
+                if (counter % 2 == 1) {
+                    btnterm.style.display = "none";
+                    btnred.style.display = "none";
+                    btnweb.style.display = "none";
+
+                } else if (counter % 2 == 0) {
+                    btnterm.style.display = "block";
+                    btnred.style.display = "block";
+                    btnweb.style.display = "block";
+                }
+                counter++;
+            }
+            
+            // Font size up - getting font size from IDs then adding 1
+            // wrapper and header variables made
+            // the font size is also obtained using .getPropertyValue
+            // the font size is made into a float and into a variable
+            // the font is increased by 1 for both variables on the function being called
+            function fontSizeUp() {
+                var el = document.getElementById('wrapper');
+                var hd = document.getElementById('header');
+
+                styleEl = window.getComputedStyle(el).getPropertyValue('font-size');
+                styleHd = window.getComputedStyle(hd).getPropertyValue('font-size');
+
+                fontsizeEl = parseFloat(styleEl);
+                fontsizeHd = parseFloat(styleHd);
+
+                el.style.fontSize = (fontsizeEl + 1) + 'px';
+                hd.style.fontSize = (fontsizeHd + 1) + 'px';
+            }
+              
+            // Font size down - getting font size from IDs then removing 1
+            // wrapper and header variables made
+            // the font size is also obtained using .getPropertyValue
+            // the font size is made into a float and into a variable
+            // the font is decreased by 1 for both variables on the function being called
+            function fontSizeDown() {
+                var el = document.getElementById('wrapper');
+                var hd = document.getElementById('header');
+
+                styleEl = window.getComputedStyle(el).getPropertyValue('font-size');
+                styleHd = window.getComputedStyle(hd).getPropertyValue('font-size');
+
+                fontsizeEl = parseFloat(styleEl);
+                fontsizeHd = parseFloat(styleHd);
+
+                el.style.fontSize = (fontsizeEl - 1) + 'px';
+                hd.style.fontSize = (fontsizeHd - 1) + 'px';
+            }          
+        </script>
+    </html>

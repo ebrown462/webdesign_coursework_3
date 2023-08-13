@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game Instruction Page</title>
+        <link rel="stylesheet" type="text/css" href="css/stylesheetGameInstruction.css">
+        <link rel = "icon" type = "image/x-icon" href = "../Website/websiteImages/faviconCroccy.png">
+    </head>
+    
+    <body>
+        <div id="header" class="hdrClass">
+            <h1>Game Instruction Page</h1>
+            <button onclick="darkMode()" id = "headerDark" class = "drkMode">Dark Mode</button>
+            <button onclick="fontSizeUp()" id = "headerFontSizeUp" class = "fsUp">FontSize++</button>
+            <button onclick="fontSizeDown()" id = "headerFontSizeDown" class = "fsDown">FontSize--</button>
+
+        </div>
+        <div id="wrapper">
+            <div id="nav" class="navText">
+                <h2>
+                    <a href = "Home.html" id = "homeBtn" class = "navBtn">Home Page</a>
+
+                    <a href = "../Game/game.html" id = "gameBtn" class = "navBtn">Game</a>
+                    <a href = "About.html" id = "aboutBtn" class = "navBtn">About</a>
+                    <a href = "Contact.html" id = "contactBtn" class = "navBtn">Contact</a>
+                    <a href="GameInstruction.html" id="instBtn" class="navBtn">Instruction</a>
+                </h2>
+                <div id="content1" class="cont1Class">
+                    <h2 id="headercont1" class="headercont1">Introduction </h2>
+                    <p>Welcome to Deliver or Die! Here's how to play:</p>
+                    
+                    <h2>Controls</h2>
+                    <p>During each scene you will have several options, you can either type out the full option or just enter the number coresponding to the option.</p>
+                    <h2>Gameplay</h2>
+                    <p>Reading the text is important since there is information about what is currently happening in the game. There are also minigame which happen during certain scenes.</p>
+                    <h2>Timer</h2>
+                    <p>The timer is constantly ticking down, you are working against the clock to deliver the package. You have 5 minutes</p>
+                    
+                </body>
+                <script>
+                    var body = document.body;
+                    var hdr = document.getElementById('header');
+                    var darkmodeButon = document.getElementById('headerDark');
+                    var nav = document.getElementById('navBtn')
+                    var cont1 = document.getElementById('content1');
+                    var fsUp = document.getElementById('headerFontSizeup')
+                    var fsDn = document.getElementById('headerFontSizeDown') 
+
+                    function darkMode() {
+                        body.classList.toggle('darkBody');
+                        darkmodeButon.classList.toggle('darkModeBtnClass');
+                    }
+
+                    function fontSizeUp() {
+                        var el = document.getElementById('wrapper');
+                        var hd = document.getElementById('header');
+
+                        styleEl = window.getComputedStyle(el).getPropertyValue('font-size');
+                        styleHd = window.getComputedStyle(hd).getPropertyValue('font-size');
+
+                        fontsizeEl = parseFloat(styleEl);
+                        fontsizeHd = parseFloat(styleHd);
+
+                        el.style.fontSize = (fontsizeEl + 1) + 'px';
+                        hd.style.fontSize = (fontsizeHd + 1) + 'px';
+                        }
+
+                    function fontSizeDown() {
+                        var el = document.getElementById('wrapper');
+                        var hd = document.getElementById('header');
+
+                        styleEl = window.getComputedStyle(el).getPropertyValue('font-size');
+                        styleHd = window.getComputedStyle(hd).getPropertyValue('font-size');
+
+                        fontsizeEl = parseFloat(styleEl);
+                        fontsizeHd = parseFloat(styleHd);
+
+                        el.style.fontSize = (fontsizeEl - 1) + 'px';
+                        hd.style.fontSize = (fontsizeHd - 1) + 'px';
+            }
+                </script>
+</html>

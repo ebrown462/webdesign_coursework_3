@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+    <html>
+
+    <!-- Includes page title, favicon, stylesheet link -->
+        <head>
+            <meta charset='utf-8'>
+            <title>Deliver or Die</title>
+            <meta name='viewport' content='width=device-width, initial-scale=1'>
+            <link rel='stylesheet' type='text/css' href='css/stylesheet.css'>
+            <link rel = "icon" type = "image/x-icon" href = "websiteImages/faviconCroccy.png">
+        </head>
+
+    <body>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Wrapper -->
+            <div id="wrapper">
+
+                <!-- Header div -->
+                <div id="header" class = "headerClass">
+
+                    <h1 id = "headerText" class = "hdrHome">Deliver or Die</h1>
+                            <!-- Buttons to make theme dark mode and increase and decrease font size -->
+                            <button onclick="darkMode()" id = "headerDark" class = "drkMode">Dark Mode</button>
+                            <button onclick="fontSizeUp()" id = "headerFontSizeUp" class = "fsUp">FontSize++</button>
+                            <button onclick="fontSizeDown()" id = "headerFontSizeDown" class = "fsDown">FontSize--</button>
+
+                            <div class = "dropdown">
+                                <!-- Button for themes, on hover a div is shown with the themes in the div "drop-content" -->
+                                <button id = "headerThemes" class = "themes">Themes</button>
+
+                                    <div class = "drop-content">
+
+                                        <a onclick = "terminal()" id = "terminalBtnID" class = "dropBtnTerminal">Terminal</a>
+                                        <a onclick = "sunset()" id = "sunsetBtnID" class = "dropBtnSunset">Sunset</a>
+                                        <a onclick = "blue()" id = "blueBtn" class = "dropBtnBlue">Blue</a>
+                                        <a onclick = "red()" id = "redBtn" class = "dropBtnRed">Red</a>
+
+                                    </div>
+                    
+                            </div>
+
+                </div>
+
+                <!-- Navigation div -->
+                <div id = "nav">
+
+                    <!-- Links to home page, game page, about page and contact page -->
+                    <h2 class = "navText">
+
+                        <a href = "Home.html" id = "homeNav" class = "navClass">Home</a>
+
+                        <a href = "../Game/game.html" id = "gameNav" class = "navClass">Game</a>
+                        
+                        <a href = "About.html" id = "aboutNav" class = "navClass">About Us</a>
+                        
+                        <a href = "Contact.html" id = "contactNav" class = "navClass">Contact Us</a>
+
+                        <a href="GameInstruction.html" id="instBtn" class="navClass">Instruction</a>
+
+                    </h2>
+
+                </div>
+
+                <!-- Div with content for left side of div -->
+                <div id="content1" class = "cont1Class">
+
+                    <h2 id = "content1h2Header1" class = "contHeader">Useful Info</h2>
+                    <p class = "ct1Class">
+                        Welcome to our site! On this page you can read some background information about the game before
+                        playing it such as story, lore, characters and more.
+                        <br><br>
+                        Click onto the game page button or the play button below if you want to play the game straight away!
+                        <br><br>
+                        You can also contact us on our contact us page if you have any feedback you would like to give us,
+                        either about the site, the game or anything in between.
+                    </p>
+
+                    <h2 id = "content1h2Header2" class = "contHeader">Story</h2>
+                    <p id = "cont1pID" class = "ct1Class">
+                        The story of our game involves a courier (you!), attempting to deliver a package unknown to you to a
+                        destination. All you know is that it is crucial the package
+                        is delivered within 5 days. You will encounter other travellers, survivors, raiders and more while
+                        you are on your journey.
+                        <br><br>
+                        Each time you play the game, the package will be random, adding a new sense of purpose every time
+                        you play the game. You have the option to open the package but
+                        you are discouraged against doing so by your boss, opening the package may lead to unforeseen
+                        consequeneces.
+                    </p>
+
+                </div>
+
+                <!-- Div with content for left side -->
+                <div id="content2" class = "cont1Class">
+
+                    <h2 id = "content2h2Header1">Gameplay</h2>
+                    <p class = "ct2Class">
+                        Playing the game involves choosing one of few option presented to you during each situation. Some choices
+                        may be between life and death so it is important to think quickly. In total, you have 5 minutes to travel to your
+                        destination and deliver the package, think you can do it?
+                        <br><br>
+                        There is a karma system, doing bad things 
+                        removes karma and doing good things adds karma. You may find items across your journey which will help you in
+                        tough situations. 
+                        <br><br>
+                        There are a variety of minigames as well such as keypad hacking, shooting enemies, searching in
+                        the dark and more!
+                        <br><br>
+
+                        <!-- Images showing gameplay -->
+                        <img class = "ct2Img" src = "websiteImages/keyPad.png" alt = "Image of Key Pad"> 
+                        <img class = "ct2Img" src = "websiteImages/oldmanShoot.png" alt = "Old Man shooter minigame image"> 
+                        <img class = "ct2Img" src = "websiteImages/flash.png" alt = "Image of flashlight minigame">
+                    </p>
+
+                </div>
+
+                <!-- a break div with the play button which is centered -->
+                <div class="break1">
+                    <br>
+                        <center>
+                            <a href = "../Game/game.html">
+                            <button id = "btnPlayID" class="btnPlay">Play</button>
+                            </a>
+                        </center>
+                    <br>
+                </div>
+
+                <!-- Second wrapper which has 3 divs in columns -->
+                <div id="wrapper2" class = "wrapper2Class">
+
+                    <!-- First column -->
+                    <div id = "trip1" class="triplePt1">
+
+                        <h2 id = "trip1h2">Game Themes</h2>
+
+                        <div class = "tripleContent"> 
+                            <p>
+                            You can change the theme of the game with the use of the drop down buttons on the game page. 
+                            <br><br>
+                            These themes do not change the gameplay in
+                            any way, they are purely cosmetic. Some themes include: 
+                            <u style = "color: rgb(85, 98, 98)">Dark Mode</u>, 
+                            <u style = "color: lime;">Original</u>, 
+                            <u style = "color: rgb(119, 198, 225)">Journal</u>, 
+                            and 
+                            <u style = "color: orange">Sunset</u>.
+                            </p>
+                        </div>
+                       
+
+                        <div class = "imageTrip">
+                            <img class = "tripImg" src = "websiteImages/themes.png" alt = "Themes image">
+                        </div>
+                    </div>
+
+                    <!-- Second column -->
+                    <div id = "trip2" class="triplePt2">
+
+                        <h2 id = "trip2h2">Game Accessiblity</h2>
+
+                        <div class = "tripleContent"> 
+                            <p>
+                                You can change the font size of the game using the buttons on the game page. 
+                                <br><br>
+                                Increased font size makes it easier to read the text. If the font size
+                                is too big then you can decrease it using the other button, allowing you to have more text on the screen.
+                            </p>
+                        </div>
+
+                        <div class = "imageTrip">
+                            <img class = "tripImg" src = "websiteImages/access.png" alt = "Accessiblity images">
+                        </div>
+                    </div>
+
+                    <!-- Third column -->
+                    <div id = "trip3" class="triplePt3">
+
+                        <h2 id = "trip3h2">Game Compatability</h2>
+
+                        <div class = "tripleContent"> 
+                            <p>
+                                The game is compatable on both desktop and mobile devices, feel free to take the journey with you on your phone,
+                                tablet, laptop or Nintendo 3DS.
+                                <br><br>
+                                There are many different endings so you can play the game many times and end up experiencing a differnet ending each
+                                time, don't be afraid to try the game on different devices!
+                            </p>
+                        </div>
+
+                        <div class = "imageTrip">
+                            <img class = "tripImg" src = "websiteImages/compat.png" alt = "Compatability images">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div> 
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+
+            <div id = "footerID" class = "footerClass">
+                <!-- Button for going back to top -->
+                <button onclick = "backToTop()" id = "backToTopID" class = "backToTopClass">Back to Top</button>
+
+            </div>
+            
+            <!-- Where snack bar is in the html -->
+            <div id = "snackbar"></div>
+
+        </footer>
+
+    </body>
+
+    <!-- Script -->
+        <script>
+            var counter = 1;
+
+            // Font size up - getting font size from IDs then adding 1
+            // wrapper and header variables made
+            // the font size is also obtained using .getPropertyValue
+            // the font size is made into a float and into a variable
+            // the font is increased by 1 for both variables on the function being called
+            function fontSizeUp() {
+                var el = document.getElementById('wrapper');
+                var hd = document.getElementById('header');
+
+                styleEl = window.getComputedStyle(el).getPropertyValue('font-size');
+                styleHd = window.getComputedStyle(hd).getPropertyValue('font-size');
+
+                fontsizeEl = parseFloat(styleEl);
+                fontsizeHd = parseFloat(styleHd);
+
+                el.style.fontSize = (fontsizeEl + 1) + 'px';
+                hd.style.fontSize = (fontsizeHd + 1) + 'px';
+            }
+
+            // Font size down - getting font size from IDs then removing 1
+            // wrapper and header variables made
+            // the font size is also obtained using .getPropertyValue
+            // the font size is made into a float and into a variable
+            // the font is decreased by 1 for both variables on the function being called
+            function fontSizeDown() {
+                var el = document.getElementById('wrapper');
+                var hd = document.getElementById('header');
+
+                styleEl = window.getComputedStyle(el).getPropertyValue('font-size');
+                styleHd = window.getComputedStyle(hd).getPropertyValue('font-size');
+
+                fontsizeEl = parseFloat(styleEl);
+                fontsizeHd = parseFloat(styleHd);
+
+                el.style.fontSize = (fontsizeEl - 1) + 'px';
+                hd.style.fontSize = (fontsizeHd - 1) + 'px';
+            }
+
+            // Variables for theme functions
+            var bg = document.body;
+            var nav = document.getElementById('nav');
+            var ct1 = document.getElementById('content1');
+            var ct2 = document.getElementById('content2');
+            var drk = document.getElementById('headerDark');
+            var btnPlay = document.getElementById('btnPlayID');
+            var headerClass = document.getElementById('header');
+            var wrp2 = document.getElementById('wrapper2');
+            var trp1 = document.getElementById('trip1');
+            var trp2 = document.getElementById('trip2');
+            var trp3 = document.getElementById('trip3');
+            var bckTop = document.getElementById('backToTopID');
+            var ins = document.getElementById('instBtn');
+
+            var hThm = document.getElementById('headerThemes');
+            
+            // Dark mode function 
+            // toggles the class of the variables to the respective dark mode classes
+            function darkMode() {
+                bg.classList.toggle('darkModeClass');
+                nav.classList.toggle('darkNav');
+                ct1.classList.toggle('darkContent1');
+                ct2.classList.toggle('darkContent1');
+                drk.classList.toggle('drkModeOn');
+                btnPlay.classList.toggle('btnPlayDark')
+                trp1.classList.toggle('darkTrip');
+                trp2.classList.toggle('darkTrip');
+                trp3.classList.toggle('darkTrip');
+                bckTop.classList.toggle('darkBackToTopClass');
+                // This line gets rid of the theme button from showing so that u cannot select dark mode and a theme at the same time
+                hThm.classList.toggle('btnNone');
+
+                // the counter is used to check if the value is odd or even, if it is odd then the snack() function is ran which displays the snackbar for the dark mode theme
+                if (counter % 2 == 1) { snack(); }
+                counter++;
+
+                // for loop for changing the classes of all images that use the cont2Images class to the darkImages class
+                for(var i = 0; i < cont2Images.length; i++) {
+                    cont2Images[i].classList.toggle('darkImages');
+                }
+
+                // same thing as other loop but for the images in the 3 column div
+                for(var i = 0; i < tripimg.length; i++) {
+                    tripimg[i].classList.toggle('darkImages');
+                }
+
+                // changes the class of the snack bar to the dark mode one and the inner html of the snack bar to 'Dark Mode'
+                document.getElementById('snackbar').classList.toggle('snackBarDark');
+                document.getElementById('snackbar').innerHTML = `Dark Mode`;
+            }
+
+            // Variables for themes since they need more variables to swap from
+            var fsUp = document.getElementById('headerFontSizeUp');
+            var fsDn = document.getElementById('headerFontSizeDown');
+
+            var homeNav = document.getElementById('homeNav');
+            var gameNav = document.getElementById('gameNav');
+            var aboutNav = document.getElementById('aboutNav');
+            var contactNav = document.getElementById('contactNav');
+
+            var terminalText = document.getElementById('terminalBtnID');
+            var sunsetText = document.getElementById('sunsetBtnID');
+
+            var cont2Images = document.getElementsByClassName('ct2Img');
+            var tripimg = document.getElementsByClassName('tripImg');
+
+            // Changes all of the variables classes to a terminal theme
+            function terminal() {
+
+                bg.classList.toggle('terminalClass');
+                nav.classList.toggle('terminalNav');
+                ct1.classList.toggle('terminalCont1');
+                ct2.classList.toggle('terminalCont1');
+                drk.classList.toggle('terminalDarkBtn');
+                btnPlay.classList.toggle('btnPlayTerminal');
+
+                headerClass.classList.toggle('headerTerminal');
+
+                terminalText.classList.toggle('terminalText');
+                sunsetText.classList.toggle('terminalSunset');
+
+                // Header elements
+                fsUp.classList.toggle('terminalFsUp');
+                fsDn.classList.toggle('terminalFsDn')
+                hThm.classList.toggle('terminalTheme');
+
+                // Nav Elements
+                homeNav.classList.toggle('terminalNav');
+                gameNav.classList.toggle('terminalNav');
+                aboutNav.classList.toggle('terminalNav')
+                contactNav.classList.toggle('terminalNav');
+                ins.classList.toggle('terminalNav');
+
+                // Footer Elements
+                bckTop.classList.toggle('terminalBackTop');
+
+                // Changes the inner html of the IDs to have a terminal look with the use if ">\" and "_"
+                document.getElementById('headerText').innerHTML = ">\\Home_Page";
+                document.getElementById('content1h2Header1').innerHTML = ">\\Home_Page\\Useful_Info";
+                document.getElementById('content1h2Header2').innerHTML = ">\\Home_Page\\Story";
+                document.getElementById('content2h2Header1').innerHTML = ">\\Home_Page\\Gameplay";
+
+                document.getElementById('trip1h2').innerHTML = ">\\Home_Page\\Game_Themes";
+                document.getElementById('trip2h2').innerHTML = ">\\Home_Page\\Game_Accessiblity";
+                document.getElementById('trip3h2').innerHTML = ">\\Home_Page\\Game_Compatability";
+
+                
+                document.getElementById('homeNav').innerHTML = "Home_Page"
+                document.getElementById('gameNav').innerHTML = "Game_Page"
+                document.getElementById('aboutNav').innerHTML = "About_Us_Page"
+                document.getElementById('contactNav').innerHTML = "Contact_Us_Page"
+                ins.innerHTML = "Instruction_Page";
+
+                // Changes the inner html of the cont1pID to the following
+                document.getElementById('cont1pID').innerHTML = 
+                `
+                The story of our game involves a courier (you!), attempting to deliver a package unknown to you to a
+                destination. 
+                <br><br>
+                All you know is that it is crucial the package
+                is delivered within 5 days. You will encounter other travellers, survivors, raiders and more while
+                you are on your journey.
+                <br><br>
+                Each time you play the game, the package will be random, adding a new sense of purpose every time
+                you play the game. 
+                <br><br>
+                You have the option to open the package but
+                you are discouraged against doing so by your boss, opening the package may lead to unforeseen
+                consequeneces.
+                `
+
+                trp1.classList.toggle('termTrip');
+                trp2.classList.toggle('termTrip');
+                trp3.classList.toggle('termTrip');
+
+                // Gets rid of these themes from being shown so that you can only select the theme you selected to remove it
+                bluebtn.classList.toggle('btnNone');
+                redbtn.classList.toggle('btnNone');
+
+                // for loop to change the images in the array to use the class terminalImages
+                for(var i = 0; i < cont2Images.length; i++) {
+                    cont2Images[i].classList.toggle('terminalImages');
+                }
+
+                // same thing as previous for loop
+                for(var i = 0; i < tripimg.length; i++) {
+                    tripimg[i].classList.toggle('terminalImages');
+                }
+
+                // checks if counter is even or odd, if even the text is returned to the original using returnText()
+                // if odd then the snack() function is ran which shows the snack bar
+                if (counter % 2 == 0) { returnText(); } 
+                if (counter % 2 == 1) { snack(); }
+                counter++;
+
+                // changes snackbar class to terminal looking class
+                // inner html is changed to 'Terminal Theme'
+                document.getElementById('snackbar').classList.toggle('snackbarTerm');
+                document.getElementById('snackbar').innerHTML = `Terminal Theme`;
+            }
+
+            // More variables
+            var bluebtn = document.getElementById('blueBtn');
+            var redbtn = document.getElementById('redBtn');
+            var terminalText = document.getElementById('terminalBtnID');
+
+            // All theme functions use the same outline as the terminal theme, changing classes of the variables using classlist.toggle
+            // snack bar is shown the same way for all theme fucntions
+            // no other themes change innerhtml of text apart from the snack bar text
+            function sunset() {
+
+                bg.classList.toggle('sunsetClass');
+                nav.classList.toggle('sunsetNav');
+                ct1.classList.toggle('sunsetCont1');
+                ct2.classList.toggle('sunsetCont1');
+                drk.classList.toggle('sunsetDarkBtn');
+                btnPlay.classList.toggle('btnPlaySunset');
+
+                headerClass.classList.toggle('headersunset');
+
+                terminalText.classList.toggle('sunsetText');
+                sunsetText.classList.toggle('sunsetTextBtn');
+
+                fsUp.classList.toggle('sunsetFsUp');
+                fsDn.classList.toggle('sunsetFsDn')
+                hThm.classList.toggle('sunsetTheme');
+
+                homeNav.classList.toggle('sunsetNav');
+                gameNav.classList.toggle('sunsetNav');
+                aboutNav.classList.toggle('sunsetNav')
+                contactNav.classList.toggle('sunsetNav');
+
+                trp1.classList.toggle('sunsetTrip');
+                trp2.classList.toggle('sunsetTrip');
+                trp3.classList.toggle('sunsetTrip');
+
+                bckTop.classList.toggle('sunsetBackTop');
+
+                bluebtn.classList.toggle('btnNone');
+                redbtn.classList.toggle('btnNone');
+
+                if (counter % 2 == 1) { snack(); }
+                counter++;
+
+                document.getElementById('snackbar').classList.toggle('snackBarSun');
+                document.getElementById('snackbar').innerHTML = `Sunset Theme`;
+            }
+
+            function returnText() {
+                document.getElementById('headerText').innerHTML = "Home Page";
+                document.getElementById('content1h2Header1').innerHTML = "Useful Info";
+                document.getElementById('content1h2Header2').innerHTML = "Story";
+                document.getElementById('content2h2Header1').innerHTML = "Gameplay";
+                document.getElementById('headerDark').innerHTML = "Dark Mode"
+
+                document.getElementById('homeNav').innerHTML = "Home Page"
+                document.getElementById('gameNav').innerHTML = "Game Page"
+                document.getElementById('aboutNav').innerHTML = "About Us Page"
+                document.getElementById('contactNav').innerHTML = "Contact Us Page"
+
+                document.getElementById('trip1h2').innerHTML = "Game Themes";
+                document.getElementById('trip2h2').innerHTML = "Game Accessiblity";
+                document.getElementById('trip3h2').innerHTML = "Game Compatability";
+
+
+                document.getElementById('cont1pID').innerHTML =
+                `
+                The story of our game involves a courier (you!), attempting to deliver a package unknown to you to a
+                destination. All you know is that it is crucial the package
+                is delivered within 5 days. You will encounter other travellers, survivors, raiders and more while
+                you are on your journey.
+                <br><br>
+                Each time you play the game, the package will be random, adding a new sense of purpose every time
+                you play the game. You have the option to open the package but
+                you are discouraged against doing so by your boss, opening the package may lead to unforeseen
+                consequeneces.
+                `        
+            }
+
+            function blue() {
+                var terminalText = document.getElementById('terminalBtnID');
+
+                bg.classList.toggle('blueClass');
+                nav.classList.toggle('blueNav');
+                ct1.classList.toggle('blueCont1');
+                ct2.classList.toggle('blueCont1');
+                drk.classList.toggle('blueDarkBtn');
+                btnPlay.classList.toggle('btnPlayBlue');
+
+                headerClass.classList.toggle('headersunset');
+
+                terminalText.classList.toggle('btnNone');
+                sunsetText.classList.toggle('btnNone');
+                bluebtn.classList.toggle('blueTextBtn');
+
+                fsUp.classList.toggle('blueFsUp');
+                fsDn.classList.toggle('blueFsDn')
+                hThm.classList.toggle('blueTheme');
+
+                homeNav.classList.toggle('blueNav');
+                gameNav.classList.toggle('blueNav');
+                aboutNav.classList.toggle('blueNav')
+                contactNav.classList.toggle('blueNav');
+
+                trp1.classList.toggle('blueTrip');
+                trp2.classList.toggle('blueTrip');
+                trp3.classList.toggle('blueTrip');
+
+                bckTop.classList.toggle('blueBackTop');
+                redbtn.classList.toggle('btnNone');
+
+
+                if (counter % 2 == 1) { snack(); }
+                counter++;
+
+                document.getElementById('snackbar').classList.toggle('snackBarBlue');
+                document.getElementById('snackbar').innerHTML = `Blue Theme`;
+            }
+
+            function red() {
+                var terminalText = document.getElementById('terminalBtnID');
+
+                bg.classList.toggle('redClass');
+                nav.classList.toggle('redNav');
+                ct1.classList.toggle('redCont1');
+                ct2.classList.toggle('redCont1');
+                drk.classList.toggle('redDarkBtn');
+                btnPlay.classList.toggle('btnPlayRed');
+
+                headerClass.classList.toggle('headersunset');
+
+                terminalText.classList.toggle('btnNone');
+                sunsetText.classList.toggle('btnNone');
+                bluebtn.classList.toggle('btnNone');
+
+                fsUp.classList.toggle('redFsUp');
+                fsDn.classList.toggle('redFsDn')
+                hThm.classList.toggle('redTheme');
+
+                homeNav.classList.toggle('redNav');
+                gameNav.classList.toggle('redNav');
+                aboutNav.classList.toggle('redNav')
+                contactNav.classList.toggle('redNav');
+
+                trp1.classList.toggle('redTrip');
+                trp2.classList.toggle('redTrip');
+                trp3.classList.toggle('redTrip');
+
+                bckTop.classList.toggle('redBackTop');
+                redbtn.classList.toggle('redTextBtn');
+
+                if (counter % 2 == 1) { snack(); }
+                counter++;
+
+                document.getElementById('snackbar').classList.toggle('snackBarRed');
+                document.getElementById('snackbar').innerHTML = `Red Theme`;
+            }
+        
+            // this function is ran when the back to top button is clicked on
+            // the screen is moved to the top
+            function backToTop() {
+                window.scrollTo(0, 0);
+            }
+
+            // this function changes the class of the snackbar to show when it is clicked on then shows it for 3 seconds before disappearing, the snack bar has an animation of fading
+            function snack() {
+                var snackbarVar = document.getElementById("snackbar");
+                snackbarVar.className = "show";
+                setTimeout(function(){ snackbarVar.className = snackbarVar.className.replace("show", ""); }, 3000);
+            }
+
+           
+        </script>
+
+
+    </html>
