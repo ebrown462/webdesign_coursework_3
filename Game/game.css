@@ -1,0 +1,1361 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+/* V - I like this one */
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas:
+        "lc mc"
+        "lcb mc";
+    overflow: hidden;
+
+    background-color: black;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#left-container {
+    grid-area: lc;
+}
+
+#left-container-bottom {
+    grid-area: lcb;
+
+    color: wheat;
+    text-align: center;
+}
+
+#container-left-bottom-main {
+    position: relative;
+    top: 10%;
+}
+
+#left-container-bottom ul+h2 {
+    margin-top: 2vh;
+}
+
+
+#left-container-bottom ul {
+    margin-top: 2vh;
+    list-style: none;
+}
+
+#left-container-bottom li {
+    display: inline-block;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#left-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px 40px 0px 0px;
+}
+
+#main-container {
+    grid-area: mc;
+    border-radius: 40px 40px 0px 0px;
+    position: relative;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: 1s;
+
+    color: lightgray;
+    height: 100vh;
+}
+
+#scene-context {
+    position: absolute;
+    bottom: 0;
+}
+
+#Choices {
+    padding-bottom: 5vh;
+    padding-top: 1vh;
+}
+
+p {
+    font-size: larger;
+    white-space: pre-line;
+    /*   What a fantastic line , allows line breaks embeded in code to render */
+}
+
+.inputClass {
+    height: 3vh;
+    width: 100%;
+    background-color: #111113;
+    border: 1px solid lightgray;
+    color: white;
+    position: absolute;
+    bottom: 0;
+}
+
+#timer {
+    position: absolute;
+    font-size: 60px;
+    letter-spacing: 7px;
+
+    text-shadow: none;
+}
+
+.btnAcc {
+    cursor: pointer;
+    background-color: rgb(26, 26, 26);
+    font-size: 20px;
+    transition: 1s;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid green;
+    font-family: 'VT323';
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: rgb(10, 190, 10);
+}
+
+.btnAcc:hover {
+    border-radius: 15px;
+}
+
+#input {
+    font-size: 20px;
+    caret-color: green;
+    padding-left: 5px;
+    transition: 1s;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropcontent {
+    display: none;
+    position: absolute;
+    width: 110px;
+    /* background-color: white; */
+    font-size: 30px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropcontent {
+    display: block;
+}
+
+.dropButton {
+    color: black;
+    display: block;
+    padding: 8px;
+    width: 130px;
+    cursor: pointer;
+    background-color: rgb(26, 26, 26);
+
+    font-size: 20px;
+
+    transition: 1s;
+
+    border: 1px solid green;
+
+    font-family: 'VT323';
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: rgb(10, 190, 10);
+}
+
+.btnNone {
+    display: none;
+}
+
+#text-container {
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+#text-container::-webkit-scrollbar {
+    display: none;
+}
+
+.prevChoiceClass {
+    color: rgb(232, 194, 148);
+}
+
+/*  Reg Theme */
+.maincontainClass {
+    transition: 1s;
+    background-color: rgb(4, 71, 4);
+    background-image: url('../Website/websiteImages/scanlines.png');
+    background-size: 200%;
+    border: 20px solid black;
+}
+
+.sceneContextClass {
+    font-family: 'VT323';
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: rgb(10, 190, 10);
+    margin-left: 5px;
+}
+
+.leftContBottomClass {
+    font-family: 'VT323';
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: rgb(10, 190, 10);
+}
+
+.choicesClass {
+    font-family: 'VT323';
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: rgb(10, 190, 10);
+}
+
+.inputClass {
+    font-family: 'VT323';
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    color: rgb(10, 190, 10);
+}
+
+.timerClass {
+    font-family: 'VT323';
+    color: rgb(84, 84, 84);
+    top: 5%;
+    left: 90%;
+    padding-right: 100px;
+}
+
+.leftcontainerClass {
+    transition: 1s;
+    border-bottom: 10px solid black;
+    border-top: 20px solid black;
+    border-left: 20px solid black;
+}
+
+.leftContainBottomClass {
+    transition: 1s;
+    background-image: url('../Website/websiteImages/scanlines.png');
+    background-color: rgb(19, 19, 19);
+    border: 20px solid black;
+    border-right: none;
+}
+
+/* Website Theme */
+.bodyWeb {
+    background-color: bisque;
+}
+
+.maincontainClassWeb {
+    background-color: rgb(255, 255, 255);
+    background-image: url('../Website/websiteImages/backgroundWeb.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 20px solid bisque;
+}
+
+.sceneContextClassWeb {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: rgb(0, 0, 0);
+}
+
+.leftContBottomClassWeb {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: black;
+}
+
+.choicesClassWeb {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: Yellow;
+}
+
+.inputClassWeb {
+    font-family: 'Verdana';
+    text-shadow: none;
+    background-color: rgb(185, 163, 138);
+    color: black;
+}
+
+.webBtnWeb {
+    border: 1px solid black;
+    background-color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: none;
+}
+
+.btnAccWeb {
+    color: white;
+    background-color: rgb(52, 23, 23);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: none;
+    border: 1px solid black;
+}
+
+.timerClassWeb {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 5%;
+    left: 88%;
+    color: black;
+}
+
+.leftConBotWeb {
+    background-image: url('../Website/websiteImages/backgroundWeb.png');
+    border: 20px solid bisque;
+    border-right: none;
+}
+
+.leftConTainWeb {
+    border-bottom: 10px solid bisque;
+    border-top: 20px solid bisque;
+    border-left: 20px solid bisque;
+}
+
+/* Website Dark Theme */
+.maincontainClassDark {
+    background-color: rgb(255, 255, 255);
+    background-image: url('../Website/websiteImages/backgroundWebDark.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sceneContextClassDark {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: rgb(255, 255, 255);
+}
+
+.leftContBottomClassDark {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: white;
+}
+
+.choicesClassDark {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: Yellow;
+}
+
+.inputClassDark {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: white;
+}
+
+.btnAccDark {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: none;
+    border: 1px solid white;
+}
+
+.timerClassDark {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    top: 5%;
+    left: 88%;
+}
+
+.leftConBotDark {
+    background-image: url(../Website/websiteImages/backgroundWebDark.png);
+}
+
+.webDarkBtn {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: none;
+    width: 170px;
+    border: 1px solid white;
+}
+
+/* Sunset theme */
+.bodySun {
+    background-color: purple;
+}
+
+.maincontainClassSunset {
+    background-color: rgb(255, 255, 255);
+    background-image: url('../Website/websiteImages/backgroundWebSunset.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 20px solid purple;
+}
+
+.sceneContextClassSunset {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: rgb(255, 255, 255);
+}
+
+.leftContBottomSunset {
+    background-image: url(../Website/websiteImages/backgroundWebSunset.png);
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: white;
+    border: 20px solid purple;
+    border-right: none;
+}
+
+.choicesClassSunset {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: rgb(255, 128, 236);
+}
+
+.inputClassSunset {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: white;
+    background-color: palevioletred;
+}
+
+.btnAccSunset {
+    color: white;
+    background-image: linear-gradient(to top, rgb(223, 47, 223), rgb(233, 216, 157));
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: none;
+    border: 1px solid white;
+}
+
+.leftContBottomClassSunset {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: none;
+    color: white;
+}
+
+.timerClassSunset {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: purple;
+    top: 5%;
+    left: 88%;
+}
+
+.leftConTainSunset {
+    border-bottom: 10px solid purple;
+    border-top: 20px solid purple;
+    border-left: 20px solid purple;
+}
+
+.webSunBtn {
+    color: white;
+    background-image: linear-gradient(to top, rgb(223, 47, 223), rgb(233, 216, 157));
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: none;
+    border: 1px solid white;
+    width: 180px;
+}
+
+#sign-contract {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 7px;
+    margin-top: 2vh;
+    margin-left: 30%;
+}
+
+#imgBox {
+    max-width: 96px;
+}
+
+/* Journal Theme */
+
+.bodyJour {
+    background-color: white;
+}
+
+.mainJour {
+    background-color: rgb(255, 255, 255);
+    background-image: url('../Website/websiteImages/page.png');
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    border: 20px solid rgb(255, 255, 255);
+    text-shadow: none;
+
+    font-family: 'Gloria Hallelujah', cursive;
+    /* font-family: 'Rock Salt', cursive;
+    font-family: 'Knewave', cursive; */
+
+}
+
+.sceneJour {
+    font-family: 'Gloria Hallelujah', cursive;
+    /* font-family: 'Rock Salt', cursive; */
+    /* font-family: 'Knewave', cursive; */
+
+    margin-left: 130px;
+
+    text-shadow: none;
+    color: black;
+}
+
+.choicesJour {
+    text-shadow: none;
+
+    font-family: 'Gloria Hallelujah', cursive;
+    /* font-family: 'Rock Salt', cursive;
+    /* font-family: 'Knewave', cursive; */
+
+    color: black;
+}
+
+.leftcontJour {
+    font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: none;
+    color: black;
+    font-size: small;
+
+}
+
+.inputJour {
+    font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: none;
+    color: black;
+    background-color: white;
+    padding: 20px;
+}
+
+.timerJour {
+    color: black;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.leftcontbotJour {
+    color: black;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: none;
+    border: 20px solid white;
+    border-right: none;
+    background-image: url(../Website/websiteImages/page.png);
+    background-size: 200%;
+}
+
+.leftcontainJour {
+    color: black;
+    font-family: 'Gloria Hallelujah', cursive;
+
+    border-bottom: 10px solid white;
+    border-top: 20px solid white;
+    border-left: 20px solid white;
+}
+
+.jourBtn {
+    color: black;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: none;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+}
+
+.btnAccJour {
+    color: black;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: small;
+    Border: 1px solid black;
+    background-color: white;
+    text-shadow: none;
+
+}
+
+.pChoiceJour {
+    /* background-color: aqua; */
+}
+
+/* BLUE THEME */
+.bodyBlue {
+    background-color: rgb(0, 21, 255);
+}
+
+.mainBlue {
+    background-color: rgb(0, 21, 255);
+    background-image: url('../Website/websiteImages/backgroundWebBlue.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 20px solid rgb(0, 21, 255);
+    text-shadow: none;
+
+    font-family: 'Verdana';
+}
+
+.sceneBlue {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: black;
+}
+
+.choicesBlue {
+    text-shadow: none;
+    font-family: 'Verdana';
+    color: black;
+}
+
+.leftcontBlue {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: black;
+    font-size: small;
+
+}
+
+.inputBlue {
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: black;
+    background-color: white;
+    padding: 20px;
+}
+
+.timerBlue {
+    color: black;
+    font-family: 'Verdana';
+}
+
+.leftcontbotBlue {
+    color: black;
+    text-shadow: none;
+    border: 20px solid rgb(0, 21, 255);
+    border-right: none;
+    background-size: 200%;
+
+    background-image: url(../Website/websiteImages/backgroundWebBlue.png);
+    font-family: 'Verdana';
+    text-shadow: none;
+    color: white;
+    border-right: none;
+}
+
+.leftcontainBlue {
+    color: black;
+    font-family: 'Verdana';
+
+    border-bottom: 10px solid rgb(0, 21, 255);
+    border-top: 20px solid rgb(0, 21, 255);
+    border-left: 20px solid rgb(0, 21, 255);
+}
+
+.blueBtn {
+    color: black;
+    font-family: 'Verdana';
+    text-shadow: none;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+}
+
+.btnAccBlue {
+    color: black;
+    font-family: 'Verdana';
+    font-size: small;
+    Border: 1px solid black;
+    background-color: white;
+    text-shadow: none;
+
+}
+
+.btnBlue {
+    color: rgb(255, 255, 255);
+    font-family: 'Verdana';
+    font-size: medium;
+    Border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(17, 0, 255);
+    text-shadow: none;
+}
+
+/* END OF BLUE THEME */
+
+
+/* Media Queries */
+@media screen and (max-width: 90%) {
+    .continued {
+        z-index: 9;
+
+        max-width: 400%;
+        max-height: 55%;
+
+        position: fixed;
+        left: 37%;
+        bottom: 25%;
+
+        background-color: rgb(4, 71, 4);
+        background-image: url(../Website/websiteImages/scanlines.png);
+        color: lime;
+        font-family: 'VT323';
+        border: 1px solid lime;
+        text-shadow: rgb(0, 255, 0) 1px 0 20px;
+        padding: 10px;
+        font-size: large;
+    }
+
+    #conBtnId {
+        width: 200px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        text-shadow: rgb(255, 255, 255) 1px 0 20px;
+        font-family: 'VT323';
+        padding: 15px;
+        background-color: rgba(4, 71, 4, 0.3);
+        border: 1px solid lime;
+        font-size: 20px;
+        transition: 1s;
+    }
+}
+
+@media screen and (max-width: 1900px) {
+    .continued {
+        z-index: 9;
+
+        max-width: 40%;
+        max-height: 55%;
+
+        position: fixed;
+        left: 37%;
+        bottom: 25%;
+
+        background-color: rgb(4, 71, 4);
+        background-image: url(../Website/websiteImages/scanlines.png);
+        color: lime;
+        font-family: 'VT323';
+        border: 1px solid lime;
+        text-shadow: rgb(0, 255, 0) 1px 0 20px;
+        padding: 10px;
+        font-size: large;
+    }
+
+    #conBtnId {
+        width: 200px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        text-shadow: rgb(255, 255, 255) 1px 0 20px;
+        font-family: 'VT323';
+        padding: 15px;
+        background-color: rgba(4, 71, 4, 0.3);
+        border: 1px solid lime;
+        font-size: 20px;
+        transition: 1s;
+    }
+}
+
+/* changes grid template areas to depo and cont for only 2 columns */
+@media screen and (min-width: 2000px) {
+    .contractContinue {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "depo cont";
+
+        max-width: 60%;
+        max-height: 80%;
+
+        position: fixed;
+        left: 22%;
+        bottom: 20%;
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid black;
+        z-index: 9;
+        font-size: large;
+    }
+
+    #contractId {
+        left: 22%;
+        bottom: 15%;
+    }
+
+    #contractContinue {
+        font-size: medium;
+        left: 32%;
+        bottom: 25%;
+
+    }
+
+    .continued {
+        z-index: 9;
+
+        max-width: 40%;
+        max-height: 55%;
+
+        position: fixed;
+        left: 37%;
+        bottom: 25%;
+
+        background-color: rgb(4, 71, 4);
+        background-image: url(../Website/websiteImages/scanlines.png);
+        color: lime;
+        font-family: 'VT323';
+        border: 1px solid lime;
+        text-shadow: rgb(0, 255, 0) 1px 0 20px;
+        padding: 10px;
+        font-size: large;
+    }
+}
+/* Any screens inbetween 2k and less */
+@media screen and (min-width: 2300px) {
+    .contractClass {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "depo cont";
+
+        max-width: 60%;
+        max-height: 80%;
+
+        position: fixed;
+        left: 22%;
+        bottom: 25%;
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid black;
+        z-index: 9;
+    }
+
+    #contractId {
+        left: 22%;
+        bottom: 15%;
+    }
+
+    #contractContinue {
+        font-size: large;
+        left: 33%;
+        bottom: 25%;
+
+    }
+}
+/* For screens that are 2k */
+@media screen and (min-width: 2650px) {
+    .contractClass {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "depo cont";
+
+        max-width: 60%;
+        max-height: 80%;
+
+        position: fixed;
+        left: 22%;
+        bottom: 30%;
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid black;
+        z-index: 9;
+    }
+
+    #contractId {
+        left: 24%;
+        bottom: 25%;
+    }
+
+    #contractContinue {
+        font-size: large;
+        left: 37%;
+        bottom: 30%;
+
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    #playerName {
+        width: fit-content;
+        font-weight: bold;
+        font-size: 20px;
+        background: none;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        border-right: none;
+        border-top: none;
+        border-left: none;
+        padding: 10px;
+        padding-left: 15px;
+        font-family: 'Indie Flower', cursive;
+    }
+
+    .contractClass {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "depo cont";
+
+        max-width: 60%;
+        max-height: 80%;
+
+        font-size: 15px;
+        position: fixed;
+        left: 22%;
+        bottom: 20%;
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid black;
+        z-index: 9;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    #contractContinue {
+        font-size: smaller;
+    }
+
+
+}
+
+@media screen and (max-width: 850px) {
+    #contractContinue {
+        font-size: x-small;
+    }
+
+    #conBtn {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    body {
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "mc mc"
+            "lc lcb";
+    }
+
+    #main-container {
+        height: 60vh;
+    }
+
+    #left-container {
+        height: 40vh;
+    }
+
+    #left-container-bottom {
+        height: 40vh;
+    }
+
+    #left-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0px;
+    }
+
+    .leftContainBottomClass {
+        transition: 1s;
+        background-color: rgb(19, 19, 19);
+        border: 20px solid black;
+        border-top: none;
+    }
+
+    .leftContBottomClass {
+        border-radius: 0px;
+    }
+
+    #SceneBg {
+        border-radius: 0px;
+    }
+
+    .leftcontainerClass {
+        transition: 1s;
+        border-bottom: 20px solid black;
+        border-top: none;
+        border-left: 20px solid black;
+    }
+
+    .leftConBotWeb {
+        border: 20px solid bisque;
+        border-top: none;
+    }
+
+    .leftConTainWeb {
+        border-bottom: 20px solid bisque;
+        border-top: 20px solid bisque;
+        border-left: 20px solid bisque;
+        border-top: none;
+    }
+
+    .leftConTainSunset {
+        border-bottom: 20px solid purple;
+        border-left: 20px solid purple;
+        border-top: none;
+    }
+
+    .leftContBottomSunset {
+        border: 20px solid purple;
+        border-top: none;
+    }
+
+    .mainJour {
+        background-attachment: fixed;
+    }
+
+    .leftcontbotJour {
+        border: 20px solid white;
+        border-right: none;
+    }
+
+    .leftcontainJour {
+        border-bottom: 20px solid white;
+        border-left: 20px solid white;
+        border-top: none;
+    }
+
+    .jourprevChoice {
+        color: blueviolet;
+    }
+
+    #contractId {
+        font-size: 13px;
+    }
+
+    .leftcontbotBlue {
+        border: 20px solid rgb(0, 21, 255);
+        border-top: none;
+    }
+    
+    .leftcontainBlue {
+        border-bottom: 10px solid rgb(0, 21, 255);
+        border-top: none;
+        border-left: 20px solid rgb(0, 21, 255);
+    }
+}
+
+.summaryClass {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#sumHdr {
+    display: flex;
+    grid-area: sHd;
+    text-align: center;
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+}
+
+#sumHdr h1 {
+    margin-top: 5%;
+}
+
+#summaryContent {
+    grid-area: sumC1;
+    margin: 10px;
+    padding: 10px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#stats {
+    grid-area: sumC2;
+    margin: 10px;
+    padding: 10px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+#sumButtons {
+    grid-area: sumBtn;
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.show {
+    font-size: 20px;
+    color: black;
+    width: 30%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    border-radius: 20px;
+    padding: 16px;
+    position: fixed;
+    left: 37%;
+    bottom: 10%;
+    border: 1px solid black;
+
+    display: grid;
+    grid-template-columns: "50% 50%";
+    grid-template-areas:
+        "sHd sHd"
+        "sumC1 sumC2"
+        "end end"
+        "sumBtn sumBtn";
+}
+
+.close {
+    display: none;
+}
+
+.sumBtn {
+    cursor: pointer;
+    Padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    background: rgb(19, 19, 19);
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    margin-top: 25px;
+    color: white;
+}
+
+.contractClass {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "depo cont";
+
+    max-width: 60%;
+    max-height: 80%;
+
+    position: fixed;
+    left: 22%;
+    bottom: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid black;
+    z-index: 9;
+}
+
+.depotInter {
+    grid-area: depo;
+    background-color: rgb(4, 71, 4);
+    background-image: url(../Website/websiteImages/scanlines.png);
+    color: lime;
+    font-family: 'VT323';
+    border: 1px solid lime;
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    padding: 10px;
+}
+
+.contractPage {
+    grid-area: cont;
+    background-color: bisque;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.player {
+    width: 400px;
+    font-weight: bold;
+    font-size: 20px;
+    background: none;
+    border-bottom: 1px solid black;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    padding: 10px;
+    padding-left: 15px;
+    font-family: 'Indie Flower', cursive;
+}
+
+iframe {
+    display: none;
+}
+
+.continued {
+    z-index: 9;
+
+    max-width: 40%;
+    max-height: 55%;
+
+    position: fixed;
+    left: 31%;
+    bottom: 25%;
+
+    background-color: rgb(4, 71, 4);
+    background-image: url(../Website/websiteImages/scanlines.png);
+    color: lime;
+    font-family: 'VT323';
+    border: 1px solid lime;
+    text-shadow: rgb(0, 255, 0) 1px 0 20px;
+    padding: 10px;
+}
+
+.conBtn {
+    width: 300px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(255, 255, 255) 1px 0 20px;
+    font-family: 'VT323';
+    padding: 15px;
+    background-color: rgba(4, 71, 4, 0.3);
+    border: 1px solid lime;
+    font-size: 30px;
+    transition: 1s;
+}
+
+.conBtn:hover {
+    transform: scale(1.2);
+}
+
+.blackbg {
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.radgen {
+    margin-left: 20px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#summaryContent>p {
+    text-align: left;
+    padding: 30px 10px 10px 10px;
+}
+
+#stats>p {
+    text-align: left;
+    padding: 30px 10px 10px 10px;
+}
+
+#stats>p:first-child {
+    padding: 0px;
+}
+
+#endingdiv {
+    text-align: center;
+    grid-area: end;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 950px) {
+    .timerClass {
+        left: 85%;
+    }
+
+    .dropButton {
+        width: 110px;
+        font-size: 16px;
+    }
+
+    .dropcontent {
+        right: 0;
+    }
+
+    #contractId {
+        font-size: 10px;
+    }
+
+    #playerName {
+        width: 60%;
+        font-weight: bold;
+        font-size: 15px;
+        background: none;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        border-right: none;
+        border-top: none;
+        border-left: none;
+        padding: 10px;
+        padding-left: 15px;
+        font-family: 'Indie Flower', cursive;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #conBtnId {
+        width: 100px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        text-shadow: rgb(255, 255, 255) 1px 0 20px;
+        font-family: 'VT323';
+        padding: 15px;
+        background-color: rgba(4, 71, 4, 0.3);
+        border: 1px solid lime;
+        font-size: 20px;
+        transition: 1s;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .continued {
+        z-index: 9;
+
+        max-width: 70%;
+        max-height: 70%;
+
+        position: fixed;
+        left: 16%;
+        bottom: 25%;
+
+        background-color: rgb(4, 71, 4);
+        background-image: url(../Website/websiteImages/scanlines.png);
+        color: lime;
+        font-family: 'VT323';
+        border: 1px solid lime;
+        text-shadow: rgb(0, 255, 0) 1px 0 20px;
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .btnAcc {
+        font-size: 15px;
+    }
+
+    .dropButton {
+        font-size: 15px;
+    }
+
+    #left-container-bottom ul {
+        font-size: large;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .timerClass {
+        left: 80%;
+    }
+
+    #left-container-bottom ul {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .btnAcc {
+        font-size: 10px;
+    }
+
+    #contractId {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .timerClass {
+        left: 75%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .timerClass {
+        left: 70%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .timerClass {
+        left: 60%;
+    }
+}

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Title, stylesheet and scripts -->
+<head>
+    <title>Deliver or Die</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='game.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/minigames.css'>
+    <script src='Js/gamepage.js' defer></script>
+    <script src='Js/story.js' defer></script>
+    <script src='Js/game.js' defer></script>
+    <script src='Js/minigames.js' defer></script>
+    <link rel = "icon" type = "image/x-icon" href = "../Website/websiteImages/faviconCroccy.png">
+</head>
+
+<!-- Shows the contract div on the body being loaded with the function showCon() -->
+<body onload="showCon()">
+    <div id="left-container" class="leftcontainerClass">
+        <img id="SceneBg">
+    </div>
+
+    <div id="left-container-bottom" class="leftContainBottomClass">
+        <div id="container-left-bottom-main" class="leftContBottomClass">
+
+            <!-- Buttons to increase and decrease font size -->
+            <button class="btnAcc" onclick="fontSizeUp()">Font Size++</button>
+            <button class="btnAcc" onclick="fontSizeDown()">Font Size--</button>
+
+            <!-- drop down list for themes -->
+            <div class="dropdown">
+                <button id="btnThemes" class="btnAcc" onclick="">Themes</button>
+                <div class="dropcontent">
+                    <button onclick="websiteTheme()" id="webBtnID" class="dropButton">Website</button>
+                    <button onclick="websiteDark()" id="webDrkBtnID" class="dropButton">Website Dark</button>
+                    <button onclick="websiteSunset()" id="webSunBtnID" class="dropButton">Website Sunset</button>
+                    <button onclick="journalTheme()" id="journalBtnID" class="dropButton">Journal</button>
+                    <button onclick="blueTheme()" id="blueBtnID" class="dropButton">Blue</button>
+                </div>
+            </div>
+
+            <h2>Your Stats</h2>
+            <ul>
+                <li>
+                    <div id="Statbox">
+                        <h3>Health</h3>
+                        <p id="health-tracker">100%</p>
+                    </div>
+                </li>
+                <li>
+                    <div id="Statbox">
+                        <h3>Karma</h3>
+                        <p id="karma-tracker">0%</p>
+                    </div>
+                </li>
+            </ul>
+            <h2>Your Items</h2>
+            <ul id="tools"></ul>
+        </div>
+    </div>
+
+    <!-- Terminal Window -->
+    <div id="main-container" class="maincontainClass">
+        <p id="timer" class="timerClass">300</p>
+        <div id="scene-context" class="sceneContextClass">
+            <div id="text-container">  <!--Scene paragraphs added dynamically during gameplay -->
+                <p id="SceneTxt" class="sceneTxtPara"></p>
+            </div>
+            <div id="Choices" class="choicesClass"></div>  <!--Choices added dynamically during gameplay -->
+        </div>
+        <input type="text" id="input" class="inputClass" placeholder=">\Input">  <!--User input in Scene -->
+
+
+        <!-- html for minigames -->
+        <div id="MiniGames">
+
+            <!-- oldman minigame -->
+            <div id="minigame_1_oldman">
+                <div class="main_game_oldman">
+                    <img class="minigame_img_oldman" id="oldman" src="minigames/images/oldman.png" onclick=hit_oldman()>
+                    <p id="score_oldman">0</p>
+                </div>
+                <!-- html for pop-up starting screen -->
+                <div id="startScreen_oldman" class="screen1_oldman">
+                    <div id="s1C_oldman" class="screen1-content_oldman">
+                        <span class="minigame_close_oldman">&times;</span>
+                        <h3>This frail old man has something i want...</h3>
+                        <br>
+                        <p>He's slow and weak, but just about alive. Shooting him 3 times should do the trick!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- html for raider minigame -->
+            <div id="raider_minigame_1">
+                <div class="main_game">
+                    <img class="minigame_img" id="raider1" src="minigames/images/raider.png" onclick=hit1()>
+                    <img class="minigame_img" id="raider2" src="minigames/images/raider.png" onclick=hit2()>
+                    <img class="minigame_img" id="raider3" src="minigames/images/raider.png" onclick=hit3()>
+                    <img class="minigame_img" id="raider4" src="minigames/images/raider.png" onclick=hit4()>
+                    <p id="score">0</p>
+                </div>
+                <!-- html for pop-up starting screen -->
+                <div id="startScreen" class="screen1">
+                    <div id="s1C" class="screen1-content">
+                        <span class="minigame_close">&times;</span>
+                        <h3>Oh no, you're being attacked!!</h3>
+                        <br>
+                        <p>Click on 10 enemies to defeat the raiders!!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- html for flashlight minigame -->
+            <div id="flashlight">
+                <div class="torch_image" onmousemove="move_torch(event)">
+                    <div class="torch"></div>
+                </div>
+                <div id="medkit" onclick="medkit()">Leave the cave</div>
+
+                <!-- html for pop-up starting screen -->
+                <div id="startScreen_flashlight" class="screen1_flashlight">
+                    <div id="s1C_flashlight" class="screen1-content_flashlight">
+                        <span class="minigame_close_flashlight">&times;</span>
+                        <h3>This is one dark cave, good job i have my handy torch!</h3>
+                        <br>
+                        <p>That raider said something about instructions on how to get through the forrest. I wonder if they wrote it down somewhere...</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- html for keypad1 minigame-->
+            <div id="keypad1">
+                <center>
+                <div id="box">
+                    <table>
+                        <tr>
+                            <td colspan="5">
+                                <!-- Current code on keypad -->
+                                <p id="current_code" style="color: lime; font-family: Digital-7; font-size: 50px" class = "code_Screen">Code: </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- buttons use class keyBtn for styling other buttons use inline style -->
+                            <td class = "td_keypad">
+                                <button class = "keyBtn" id="button1" type="button" onclick="button_pressed(number = '1')">1</button>
+                            </td>
+                            <td class = "td_keypad"> 
+                                <button class = "keyBtn" id="button2" type="button" onclick="button_pressed(number = '2')">2</button>
+                            </td>
+                            <td class = "td_keypad">
+                                <button class = "keyBtn" id="button3" type="button" onclick="button_pressed(number = '3')">3</button>
+                            </td>
+                            <td class = "td_keypad">
+                                <button style = "background: rgb(255, 0, 0)" class = "keyBtn" id="clear" type="button" onclick="keypad1_cancel()">Cancel</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>                    
+                                <button class = "keyBtn" id="button4" type="button" onclick="button_pressed(number = '4')">4</button>
+                            </td>
+                            <td>
+                                <button class = "keyBtn" id="button5" type="button" onclick="button_pressed(number = '5')">5</button>
+                            </td>
+                            <td>
+                                <button class = "keyBtn" id="button6" type="button" onclick="button_pressed(number = '6')">6</button>
+                            </td>
+                            <td>
+                                <button style = "background: rgb(255, 196, 0)" class = "keyBtn" id="clear" type="button" onclick="keypad1_clear()">Clear</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class = "keyBtn" id="button7" type="button" onclick="button_pressed(number = '7')">7</button>
+                            </td>
+                            <td>
+                                <button class = "keyBtn" id="button8" type="button" onclick="button_pressed(number = '8')">8</button>
+                            </td>
+                            <td>
+                                <button class = "keyBtn" id="button9" type="button" onclick="button_pressed(number = '9')">9</button>
+                            </td>
+                            <td>
+                                <button style = "background: rgb(40, 194, 5)" class = "keyBtn" id="enter" type="button" onclick="keypad1_enter()">Enter</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button class = "keyBtn" id="button0" type="button" onclick="button_pressed(number = '0')">0</button>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </center>
+            <!-- html for pop-up starting screen -->
+                <div id="startScreen_keypad1" class="screen1_keypad1">
+                    <div id="s1C_keypad1" class="screen1-content_keypad1">
+                        <span class="minigame_close_keypad1">&times;</span>
+                        <h3>It looks like there's a keypad beside the door!</h3>
+                        <br>
+                        <p>I wonder if there is a clue anywhere on what the code is?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- html for keypad2 minigame -->
+            <div id="keypad2">
+                <center>
+                <div id="box">
+                    <table>
+                        <tr>
+                            <td colspan="5">
+                                <!-- Current code on keypad -->
+                                <p id="current_code_keypad2" style="color: lime; font-family: Digital-7; font-size: 50px" class = "code_Screen">Code: </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "td_keypad">
+                                <button class = "keyBtn" id="button1_keypad2" type="button" onclick="button_pressed_keypad2(number_keypad2 = '1')">1</button>
+                            </td>
+                            <td class = "td_keypad"> 
+                                <button class = "keyBtn" id="button2" type="button" onclick="button_pressed_keypad2(number_keypad2 = '2')">2</button>
+                            </td>
+                            <td class = "td_keypad">
+                                <button class = "keyBtn" id="button3" type="button" onclick="button_pressed_keypad2(number_keypad2 = '3')">3</button>
+                            </td>
+                            <td class = "td_keypad">
+                                <button style = "background: rgb(255, 0, 0)" class = "keyBtn" id="clear" type="button" onclick="keypad2_cancel()">Cancel</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>                    
+                                <button class = "keyBtn" id="button4" type="button" onclick="button_pressed_keypad2(number_keypad2 = '4')">4</button>
+                            </td>
+                            <td>
+                                <button class = "keyBtn" id="button5" type="button" onclick="button_pressed_keypad2(number_keypad2 = '5')">5</button>
+                            </td>
+                            <td>
+                                <button class = "keyBtn" id="button6" type="button" onclick="button_pressed_keypad2(number_keypad2 = '6')">6</button>
+                            </td>
+                            <td>
+                                <button style = "background: rgb(255, 196, 0)" class = "keyBtn" id="clear" type="button" onclick="keypad2_clear()">Clear</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class = "keyBtn" id="button7" type="button" onclick="button_pressed_keypad2(number_keypad2 = '7')">7</button>
+                            </td>
+                            <td>
+                                <button class = "keyBtn" id="button8" type="button" onclick="button_pressed_keypad2(number_keypad2 = '8')">8</button>
+                            </td>
+                            <td>
+                                <button class = "keyBtn" id="button9" type="button" onclick="button_pressed_keypad2(number_keypad2 = '9')">9</button>
+                            </td>
+                            <td>
+                                <button style = "background: rgb(40, 194, 5)" class = "keyBtn" id="enter" type="button" onclick="keypad2_enter()">Enter</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button class = "keyBtn" id="button0" type="button" onclick="button_pressed(number = '0')">0</button>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </center>
+            <!-- html for pop-up starting screen -->
+                <div id="startScreen_keypad2" class="screen1_keypad2">
+                    <div id="s1C_keypad2" class="screen1-content_keypad2">
+                        <span class="minigame_close_keypad2">&times;</span>
+                        <h3>It looks like there's a keypad beside the door!</h3>
+                        <br>
+                        <p>I wonder if there is a clue anywhere on what the code is?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- html for fishing minigame -->
+            <div id="fishing">
+                <div class="main_game_fishing">
+                    <img class="minigame_img_fishing" id="fish1" src="minigames/images/fish.png" onclick=hit1_fishing()>
+                    <img class="minigame_img_fishing" id="fish2" src="minigames/images/fish.png" onclick=hit2_fishing()>
+                    <img class="minigame_img_fishing" id="fish3" src="minigames/images/fish.png" onclick=hit3_fishing()>
+                    <img class="minigame_img_fishing" id="fish4" src="minigames/images/fish.png" onclick=hit4_fishing()>
+                    <p id="score_fishing">0</p>
+                </div>
+                <!-- html for pop-up starting screen -->
+                <div id="startScreen_fishing" class="screen1_fishing">
+                    <div id="s1C_fishing" class="screen1-content_fishing">
+                        <span class="minigame_close_fishing">&times;</span>
+                        <h3>Time to catch some fish!!</h3>
+                        <br>
+                        <p>Catching 5 should be enough</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- html for bear minigame -->
+            <div id="minigame_1_bear">
+                <div class="main_game_bear">
+                    <img class="minigame_img_bear" id="bear" src="minigames/images/bear.png" onclick=hit_bear()>
+                    <p id="score_bear">0</p>
+                </div>
+                <!-- html for pop-up starting screen -->
+                <div id="startScreen_bear" class="screen1_bear">
+                    <div id="s1C_bear" class="screen1-content_bear">
+                        <span class="minigame_close_bear">&times;</span>
+                        <h3>A Bear!</h3>
+                        <br>
+                        <p>Shooting him 10 times should do the trick!</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- html for son minigame -->
+            <div id="minigame_1_son">
+                <div class="main_game_son">
+                    <img class="minigame_img_son" id="son" src="minigames/images/son.png" onclick=hit_son()>
+                    <p id="score_son">0</p>
+                </div>
+                <!-- html for pop-up starting screen -->
+                <div id="startScreen_son" class="screen1_son">
+                    <div id="s1C_son" class="screen1-content_son">
+                        <span class="minigame_close_son">&times;</span>
+                        <h3>This guy doesn't look too happy..</h3>
+                        <br>
+                        <p>Shooting him 15 times should take him down!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary div containing player stats, will shop upon death or win of game -->
+    <div id="summaryId" class="summaryClass">
+        <div id="sumHdr">
+            <h1>Summary</h1>
+        </div>
+
+        <!-- Just text -->
+        <div id="summaryContent">
+            <p>Average Scene Time</p>
+            <p>Num of Scenes</p>
+            <p>Days Survived</p>
+            <p>Karma</p>
+            <p>Health</p>
+            <p>Time Remaining</p>
+        </div>
+
+        <!-- Div for innerhtml change for ending -->
+        <div id = "endingdiv">
+            <span id = "ending-txt">Test</span>
+        </div>
+
+        <!-- Where stats are placed -->
+        <div id="stats">
+            <p style="text-align: left;" id="stats-box"><p id="avgSceneTime">Empty</p>
+                <p id="numOfScenes">Empty</p>
+                <p id="daySurvived">Empty</p>
+                <p id="karma">Empty</p>
+                <p id="health">Empty</p>
+                <p id="timeRemaing">Empty</p>
+            </p>
+        </div>
+
+        <!-- Buttons to close the game, leave or restart -->
+        <div id=sumButtons>
+            <a href="game.html"><button class="sumBtn">Restart</button></a>
+
+            <button onclick="hide()" class="sumBtn">Close</button>
+
+            <a href="../Website/Home.html"><button class="sumBtn">Home</button></a>
+        </div>
+    </div>
+
+    <!-- Contract div, shows up when body loads, has info about the story and a contarct you have to sign -->
+    <div id="contractId" class="contractClass">
+        <div class="depotInter">
+            <h1>Introduction</h1>
+            <hr style="margin-top: 15px; border: 1px solid lime">
+            <p>
+                You find yourself at a dully lit delivery depot, standing in front of a glass pane. The other side looks
+                pitch black.
+
+                Suddenly, you hear a voice speak up from behind the glass.
+
+                <span style="color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 1px 0 20px;
+                ">
+                    Depot worker: Hey, hey you..new delivery guy.
+                </span>
+
+                The left glass pane side door is lifted for hands to appear in the dim light, holding a package.
+
+                <span style="color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 1px 0 20px;
+                ">
+                    Depot worker: Here’s your parcel you have to deliver to uhh..to an abandoned gas station. We don’t
+                    know what’s inside the parcel or who it’s for but more so...we don’t care. </span>
+
+                You take the package from their hands, to watch the hands slowly retrieve back into the darkness and
+                door shut.
+
+                <span style="color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 1px 0 20px;
+                ">
+                    Depot worker: However, the sender who left the package marked it as highly important and wants the
+                    package delivered in <span style="text-decoration: underline;">5 days</span>. It also requires you
+                    to sign this contract.
+
+                    Depot worker: Please read it carefully. There are more instructions in it on where to bring it to
+                    which you’d find beneficial.
+                </span>
+
+                The worker at the depot, who you could vaguely see through the glass pane, next hands you a flimsy
+                folded up paper through a space under the glass pane.
+            </p>
+
+        </div>
+
+        <div class="contractPage">
+            <h1>Contract</h1>
+            <hr style="margin-top: 10px; border: 1px solid black">
+            <p>
+                Please deliver this parcel to an abandoned gas station a distance North of the depot. It has a falling
+                apart pole sign with the name ‘Pump & Munch’ but some letters have fallen out.
+
+                You’ll know it when you see it.
+
+                A guy with a red trapper hat will be waiting for you. You must hand the package to him.
+
+                To this contract you agree that:
+
+                1. Handle the package with utmost care.
+
+                2. Don’t give the package to ANYONE but a guy with the a <span style="text-decoration: underline;">
+                    trapper hat. </span>
+
+                3. Don’t arrive LATE or I'll come personally find you; and you wouldn’t want that.
+
+                4. And Lastly, DO NOT in ANY circumstance open the package.
+
+                Please sign here that you have read this agreement:
+
+            <!-- Form that calls function next() on submit which shows the next div -->
+            <form target="frame" onsubmit="next()">
+                <label for="gender">Gender:</label>
+                <input class="radgen" type="radio" name="gender" value="male">
+                <label for="gender">Male</label>
+                <input class="radgen" type="radio" name="gender" value="female">
+                <label for="gender">Female</label>
+                <input class="radgen" type="radio" name="gender" value="other">
+                <label for="gender">Other</label>
+                <br>
+                <label style="padding: 10px;" for="playerName">Name:</label>
+                <input type="text" id="playerName" class="player" name="playerName">
+            </form>
+
+            <!-- error message is shown here -->
+            <span id="errorC"></span>
+            </p>
+
+            <hr style="margin-top: 10px; border: 1px solid black">
+
+            <!-- Used to enter the form -->
+            <button onclick="next()" id="sign-contract">Sign Contract</button>
+
+        </div>
+    </div>
+
+    <!-- Just shows more info after contract is signed -->
+    <div id="contractContinue">
+        <p>
+            Not ominous and vague at all.
+
+            You hand back the paper through the slot.
+            <span style="color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 1px 0 20px;
+                ">
+                Depot worker: Thanks. Safe journey..<span id="name"></span>
+            </span>
+            You nod, and as you begin to turn around, the voice calls out.
+            <span style="color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 1px 0 20px;
+                ">
+                Depot worker: Wait, also.
+            </span>
+            You turn back to see something placed on the desk near the front of the glass pane.
+            <span style="color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 1px 0 20px;
+            ">
+                Depot worker: Take this for your travels.
+            </span>
+            You walk up towards the object. It’s a <span style="text-decoration: underline">revolver</span>...
+
+            You walk up the stairs to the exit of the depot and are greeted with light blaring in your eyes.
+
+            It’s been a while since you’ve seen sunlight or even been up to the surface at all.
+
+            You walk for a while following North.
+        </p>
+
+        <!-- Button which hides the div when pressed and allows game to be played -->
+        <div style="justify-content: center; display: flex; margin-top: 20px;">
+            <button id="conBtnId" class="conBtn" onclick="hideCon()">Continue</button>
+        </div>
+    </div>
+
+    <div id="blkbg"></div>
+
+    <iframe name="frame"></iframe>
+
+    <audio src="sounds/VirusTheme.mp3"></audio>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
